@@ -38,6 +38,7 @@
   align-self: center;
   justify-content: center;
   height: 40%;
+  height: 50vh;
 }
 
 .AboutMe{
@@ -47,6 +48,8 @@
   align-self: center;
   justify-content: center;
   height: 40%;
+  height: 50vh;
+
   margin: 2% 0 2% 0;
 }
 .Presentation-content,
@@ -61,7 +64,7 @@
   display: flex;
   justify-content: end;
   width: 40%;
-}
+}HEAD
 .Presentation-img img{
   height: 60vh;
   width: 20vw;
@@ -71,12 +74,11 @@
   justify-content: start;
   width: 40%;
 }
+.Presentation-img img,
 .AboutMe-img img{
   height: 60vh;
   width: 20vw;
 }
-
-
 .Find-out-more{
   background-color: rgb(29, 27, 27);
   color: white;
@@ -90,6 +92,10 @@
   height: 40px;
   border: 1px solid white;
   border-radius: 5px;
+  padding-top: 2%;
+  width: 150px;
+  height: 40px;
+  border: 1px solid white;
 }
 .Find-out-more:hover{
   transform: scale(1.02);
