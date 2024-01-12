@@ -5,6 +5,9 @@ import NavMenu from './NavMenu';
 import reportWebVitals from './reportWebVitals';
 import Presentation from './Presentation';
 import AboutMe  from './Omnie';
+import Gallery from './Gallery';
+import Contact from './Contact';
+import SocialMedia from './SocialMedia';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +15,9 @@ root.render(
     <NavMenu />
     <Presentation />
     <AboutMe />
+    <Gallery />
+    <Contact />
+    <SocialMedia />
   </React.StrictMode>
   
 );
