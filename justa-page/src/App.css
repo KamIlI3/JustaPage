@@ -12,16 +12,16 @@
 }
 
 .Nav-header h3{
-  width: 40%;
+  width: 35%;
   display: flex;
   align-items: center;
 }
 .Nav-subpages{
-  width: 40%;
+  width: 35%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .Nav-header a{
@@ -35,10 +35,7 @@
   background-color: rgb(0, 158, 158);
   display: flex;
   flex-direction: row;
-  align-self: center;
   justify-content: center;
-  height: 40%;
-  height: 50vh;
 }
 
 .AboutMe{
@@ -47,9 +44,6 @@
   flex-direction: row;
   align-self: center;
   justify-content: center;
-  height: 40%;
-  height: 50vh;
-
   margin: 2% 0 2% 0;
 }
 .Presentation-content,
@@ -58,26 +52,26 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  width: 40%;
+  width: 35%;
 }
 .Presentation-img{
   display: flex;
-  justify-content: end;
-  width: 40%;
-}HEAD
-.Presentation-img img{
-  height: 60vh;
-  width: 20vw;
+  justify-content: flex-end;
+  width: 35%;
 }
+.Presentation-img img{
+  width: 50%;
+  height: 110%;
+}
+
 .AboutMe-img{
   display: flex;
-  justify-content: start;
-  width: 40%;
+  justify-content: flex-start;
+  width: 35%;
 }
-.Presentation-img img,
 .AboutMe-img img{
-  height: 60vh;
-  width: 20vw;
+  height: 100%;
+  width: 50%;
 }
 .Find-out-more{
   background-color: rgb(29, 27, 27);
@@ -87,15 +81,11 @@
   justify-content: center;
   align-self: center;
   text-align: center;
-  padding-top: 15px;
   width: 150px;
   height: 40px;
   border: 1px solid white;
   border-radius: 5px;
-  padding-top: 2%;
-  width: 150px;
-  height: 40px;
-  border: 1px solid white;
+  padding-top: 15px;
 }
 .Find-out-more:hover{
   transform: scale(1.02);
@@ -109,7 +99,6 @@
   justify-content: center;
   text-align: center;
   color: white;
-  height: 50%;
   margin: 2% 0 0 0;
 }
 
@@ -119,7 +108,7 @@
   align-self: center;
   justify-content: center;
   text-align: center;
-  width: 80%;
+  width: 70%;
   margin: 0;
 }
 

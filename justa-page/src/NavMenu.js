@@ -8,11 +8,11 @@ function NavMenu() {
           Justyna Gawryś
         </h3>
         <div className='Nav-subpages'>
-        <a>Strona Główna</a>
-        <a>O Mnie</a>
-        <a>Galeria</a>
-        <a>Sklep</a>
-        <a><i className="fa-solid fa-cart-shopping"></i></a>
+        <a href='Index.html'>Strona Główna</a>
+        <a href='Index.html'>O Mnie</a>
+        <a href='Index.html'>Galeria</a>
+        <a href='Index.html'>Sklep</a>
+        <a href='Index.html'><i className="fa-solid fa-cart-shopping"></i></a>
         </div>
       </header>
     </div>
