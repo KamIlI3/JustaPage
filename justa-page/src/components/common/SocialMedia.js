@@ -1,4 +1,5 @@
-import './App.css';
+import '../../css/App.css';
+
 
 function SocialMedia(){
     return(

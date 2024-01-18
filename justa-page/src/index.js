@@ -1,25 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import NavMenu from './NavMenu';
+import './css/index.css';
 import reportWebVitals from './reportWebVitals';
-import Presentation from './Presentation';
-import AboutMe  from './Omnie';
-import Gallery from './Gallery';
-import Contact from './Contact';
-import SocialMedia from './SocialMedia';
-import Footer from './footer';
+import HomePage from './pages/HomePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NavMenu />
-    <Presentation />
-    <AboutMe />
-    <Gallery />
-    <Contact />
-    <SocialMedia />
-    <Footer />
+    <HomePage />
   </React.StrictMode>
   
 );
