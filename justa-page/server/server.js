@@ -1,11 +1,12 @@
-// db.js
 const mongoose = require('mongoose');
-const config = require('./config');
+const config = require('./config/config');
 const express = require('express');
 const app = express();
-// const User = require('./User');  // Upewnij się, że ścieżka jest poprawna
 const cors = require('cors');
-const Omnie = require('./Omnie'); 
+const Omnie = require('../db/models/Omnie'); 
+const PresentationModel = require('../db/models/presentationModel');
+const GalleryModel = require('../db/models/galleryModel');
+
 // Konfiguracja CORS, aby akceptować żądania z Twojej aplikacji frontendowej
 app.use(cors({
   origin: 'http://localhost:3000'  // Adres Twojej aplikacji React
@@ -23,19 +24,30 @@ const connectToDatabase = async () => {
   }
 };
 
-// app.get('/api/users', async (req, res) => {
-//   try {
-//       const users = await User.find().select('name -_id'); // Pobieranie wszystkich użytkowników
-//       res.json(users);
-//   } catch (error) {
-//       console.error('Error fetching users:', error);
-//       res.status(500).send('Internal Server Error');
-//   }
-// });
 app.get('/api/omnie', async (req, res) => {
   try {
     const omnie = await Omnie.find();
     res.json(omnie);
+  } catch (error) {
+    console.error('Error fetching Omnie:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+app.get('/api/presentation', async (req, res) => {
+  try {
+    const presentation = await PresentationModel.find();
+    res.json(presentation);
+  } catch (error) {
+    console.error('Error fetching Omnie:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+app.get('/api/gallery', async (req, res) => {
+  try {
+    const gallery = await GalleryModel.find();
+    res.json(gallery);
   } catch (error) {
     console.error('Error fetching Omnie:', error);
     res.status(500).send('Internal Server Error');

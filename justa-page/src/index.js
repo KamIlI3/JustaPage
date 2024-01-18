@@ -8,6 +8,7 @@ import AboutMe  from './Omnie';
 import Gallery from './Gallery';
 import Contact from './Contact';
 import SocialMedia from './SocialMedia';
+import Footer from './footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
     <Gallery />
     <Contact />
     <SocialMedia />
+    <Footer />
   </React.StrictMode>
   
 );

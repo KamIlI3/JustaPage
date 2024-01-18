@@ -22,17 +22,12 @@ function AboutMe() {
   return (
     <div className="AboutMe">
       <div className="AboutMe-img">
-        {/* <img src="Justyna.jpg" alt="JustynaGawryś" /> */}
         <img src={imgURL} alt="JustynaGawryś" />
-
       </div>
       <div className="AboutMe-content">
         <h2>O Mnie</h2>
         { <p>{entries}</p>}
-
-        <a className="Find-out-more" href="Omnie.html">
-          Czytaj dalej
-        </a>
+        <a className="Find-out-more" href="Omnie.html">Czytaj dalej</a>
       </div>
     </div>
   );
