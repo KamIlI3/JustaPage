@@ -1,24 +1,10 @@
+import React from 'react';
 import '../../css/App.css';
-import React, { useState, useEffect } from "react";
+import useOmnieData from '../../hooks/useOmnieData';
 
 function AboutMe() {
-
-  const [entries, setEntries] = useState([]);
-  const [imgURL, setURL] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/api/omnie")
-      .then((response) => response.json())
-      .then((data) => {
-        // Zakładając, że 'data' to tablica obiektów z polem 'entry'
-        const retrievedEntries = data.map((omnie) => omnie.entry);
-        const retrievedURL = data.map((omnie) => omnie.imgURL);
-        setEntries(retrievedEntries);
-        setURL(retrievedURL);
-      })
-      .catch((error) => console.error("Error fetching Omnie:", error));
-  }, []);
-
+  const { imgURL, entries } = useOmnieData();
+  
   return (
     <div className="AboutMe">
       <div className="AboutMe-img">

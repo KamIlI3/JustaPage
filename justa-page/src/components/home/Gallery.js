@@ -1,18 +1,9 @@
+import React from 'react';
 import '../../css/App.css';
-import React, { useState, useEffect } from "react";
+import useGalleryData from '../../hooks/useGalleryData';
 
 function Gallery() {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/api/gallery")
-      .then((response) => response.json())
-      .then((data) => {
-        // Zakładając, że 'data' to tablica obiektów z polami 'id' i 'imgURL'
-        setImages(data.slice(0, 3)); // Pobiera tylko trzy pierwsze obrazy
-      })
-      .catch((error) => console.error("Error fetching gallery:", error));
-  }, []);
+  const { images } = useGalleryData();
   return (
     <div className="Gallery">
       <h2>Efekty mojej pracy</h2>
@@ -24,9 +15,7 @@ function Gallery() {
           </div>
         ))}
       </div>
-      <a className="See-more" href="Gallery.html">
-        Zobacz więcej zdjęć
-      </a>
+      <a className="See-more" href="Gallery.html">Zobacz więcej zdjęć</a>
     </div>
   );
 }
