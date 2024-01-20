@@ -1,4 +1,6 @@
-import '../../css/App.css';
+import '../../css/index.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavMenu() {
   return (
@@ -9,12 +11,12 @@ function NavMenu() {
           </h3>
         </div>
         <div className='Nav-subpages'>
-          <a href='Index.html'>Strona Główna</a>
-          <a href='Index.html'>O Mnie</a>
-          <a href='Index.html'>Galeria</a>
-          <a href='Index.html'>Kontakt</a>
-          <a href='Index.html'>Sklep</a>
-          <a href='Index.html'><i className="fa-solid fa-cart-shopping"></i></a>
+        <Link to="/">Strona Główna</Link>
+        <Link to="/about">O Mnie</Link>
+        <Link to="/gallery">Galeria</Link>
+        <Link to="/contact">Kontakt</Link>
+        <Link to="/shop">Sklep</Link>
+        <Link to="/cart"><i className="fa-solid fa-cart-shopping"></i></Link>
         </div>
     </div>
   );

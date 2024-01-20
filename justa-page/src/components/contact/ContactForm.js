@@ -1,5 +1,6 @@
 // src/components/ContactForm.js
 import React, { useState } from 'react';
+import '../../css/Contact.css';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -32,32 +33,42 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Twoje imię"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Twój email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Twoja wiadomość"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Wyślij</button>
-    </form>
+    <div className='Contact'>
+      <div className='Contact-img'> 
+      <img src='Justyna.jpg' alt='asd'/>
+
+      </div>
+      <div className='Contact-form'>
+        <form onSubmit={handleSubmit} className='Form'>
+        <input
+        className=''
+          type="text"
+          name="name"
+          placeholder="Twoje imię"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Twój email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Twoja wiadomość"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Wyślij</button>
+        </form>
+      </div>
+    </div>
+    
   );
 }
 

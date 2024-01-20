@@ -1,6 +1,6 @@
 // components/Presentation.js
 import React from 'react';
-import '../../css/App.css';
+import '../../css/Home.css';
 import usePresentationData from '../../hooks/usePresentationData';
 
 function Presentation() {

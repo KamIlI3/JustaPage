@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/App.css';
+import '../../css/Home.css';
 import useOmnieData from '../../hooks/useOmnieData';
 
 function AboutMe() {

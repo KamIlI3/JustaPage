@@ -7,7 +7,6 @@ import Gallery from '../components/home/Gallery';
 import Contact from '../components/home/Contact';
 import SocialMedia from '../components/common/SocialMedia';
 import Footer from '../components/common/footer';
-import ContactForm from '../components/contact/ContactForm';
 import Products from '../components/home/Products';
 
 function HomePage(){
@@ -21,7 +20,7 @@ function HomePage(){
         <Contact />
         <SocialMedia />
         <Footer />
-        <ContactForm />
+        
     </div>
   )
 }
