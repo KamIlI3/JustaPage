@@ -1,12 +1,14 @@
 import '../../css/index.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer(){
     return(
         <div className='Footer'>
             <div className='Footer-informs'>
-            <a href='Regilamin.html'>Regulamin</a>
-            <a href='PolitykaPrywatnosci.html'>Polityka Prywatności</a>
-            <a href='PolitykaODO.html'>Polityka Ochrony Danych Osobowych</a>
+            <Link to="/regulamin">Regulamin</Link>
+            <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
+            <Link to="/polityka-odo">Polityka Ochrony Danych Osobowych</Link>
             </div>
             <p>© justynagawrys.pl - 2024. Wszelkie prawa zastrzeżone.</p>
         </div>

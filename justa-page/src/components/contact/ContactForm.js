@@ -118,6 +118,7 @@ function ContactForm() {
             placeholder="Temat"
             value={formData.subject}
             onChange={handleChange}
+            autoComplete="off"
           />
 
           <label htmlFor="message">Wiadomość:</label>

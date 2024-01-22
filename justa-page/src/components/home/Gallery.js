@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Home.css';
 import useGalleryData from '../../hooks/useGalleryData';
+import { Link } from 'react-router-dom';
 
 function Gallery() {
   const { images } = useGalleryData();
@@ -15,7 +16,7 @@ function Gallery() {
           </div>
         ))}
       </div>
-      <a className="See-more" href="Gallery.html">Zobacz więcej zdjęć</a>
+      <Link to="/gallery" className="See-more">Zobacz więcej zdjęć</Link>
     </div>
   );
 }

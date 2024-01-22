@@ -100,6 +100,9 @@
   justify-content: flex-start;
   margin: 2% 0 2% 0;
 }
+.Products-item-reverse {
+  flex-direction: row-reverse; /* odwrócony kierunek: opis po lewej, zdjęcie po prawej */
+}
 .Products-item:nth-child(even){
   margin: 0;
 }

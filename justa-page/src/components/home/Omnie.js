@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Home.css';
 import useOmnieData from '../../hooks/useOmnieData';
+import { Link } from 'react-router-dom';
 
 function AboutMe() {
   const { imgURL, entries } = useOmnieData();
@@ -13,7 +14,7 @@ function AboutMe() {
       <div className="AboutMe-content">
         <h2>O Mnie</h2>
         { <p>{entries}</p>}
-        <a className="Find-out-more" href="Omnie.html">Czytaj dalej</a>
+        <Link to="/aboutme" className="Find-out-more">Czytaj dalej</Link>
       </div>
     </div>
   );
