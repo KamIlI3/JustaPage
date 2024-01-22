@@ -27,8 +27,64 @@
   .Contact-form form input,
   .Contact-form form textarea{
     width: 70%;
-    margin-bottom: 5%;
   } 
   .Contact-form form textarea{
     height: 10rem;
   }
+
+  .msg-status{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 400px;
+    border-radius: 12px;
+    font-size: 20px;
+  }
+  .success{
+    display: flex;
+    background-color: hsl(143, 83%, 55%);
+  }
+  .error{
+    display: flex;
+    background-color: hsl(9, 100%, 64%);
+  }
+  .error-message{
+    width: 300px;
+    height: 100px;
+    background-color: rgb(247, 196, 196);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .loading {
+    position: relative;
+    pointer-events: none;
+    opacity:0.5;
+}
+
+.loading::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-right-color: rgba(0,0,0,0.7);
+    transform: translate(-50%, -50%) rotate(0deg);
+    content:"";
+    animation: rotateSingleLoading 0.3s infinite linear;
+    z-index: 10;
+}
+
+@keyframes rotateSingleLoading {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
