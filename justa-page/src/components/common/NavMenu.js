@@ -12,7 +12,7 @@ function NavMenu() {
         </div>
         <div className='Nav-subpages'>
         <Link to="/">Strona Główna</Link>
-        <Link to="/about">O Mnie</Link>
+        <Link to="/aboutme">O Mnie</Link>
         <Link to="/gallery">Galeria</Link>
         <Link to="/contact">Kontakt</Link>
         <Link to="/shop">Sklep</Link>

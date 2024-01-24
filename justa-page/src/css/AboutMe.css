@@ -1,0 +1,65 @@
+.AboutMe{
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+}
+.AboutMe-lvl1,
+.AboutMe-lvl2{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 50%;
+    align-self: center;
+}
+.AboutMe-img,
+.AboutMe-presentation,
+.AboutMe-entry,
+.AboutMe-images{
+    width: 50%;
+}
+.AboutMe-images img{
+    width: 60%;
+    height: 60%;
+}
+.AboutMe-entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+}
+.AboutMe-img{
+    margin: 0;
+    margin-right: 3%;
+}
+.AboutMe-img img{
+    width: 70%;
+}
+.AboutMe-images{
+    margin: 0;
+    margin-left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AboutMe-images img{
+    position: relative;
+    width: 50%;
+    height: 50%;
+}
+#img1{
+    z-index: 1;
+    left: 30%;
+}
+#img2{
+    left: 10%;
+    bottom: 10%;
+}
+.AboutMe-presentation{
+    margin: 0;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

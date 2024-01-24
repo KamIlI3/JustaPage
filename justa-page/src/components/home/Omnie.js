@@ -4,16 +4,16 @@ import useOmnieData from '../../hooks/useOmnieData';
 import { Link } from 'react-router-dom';
 
 function AboutMe() {
-  const { imgURL, entries } = useOmnieData();
+  const { data } = useOmnieData();
   
   return (
-    <div className="AboutMe">
-      <div className="AboutMe-img">
-        <img src={imgURL} alt="JustynaGawryś" />
+    <div className="AboutMe-home">
+      <div className="AboutMe-home-img">
+        <img src={data.imgURL} alt="JustynaGawryś" />
       </div>
-      <div className="AboutMe-content">
+      <div className="AboutMe-home-content">
         <h2>O Mnie</h2>
-        { <p>{entries}</p>}
+        { <p>{data.entry}</p>}
         <Link to="/aboutme" className="Find-out-more">Czytaj dalej</Link>
       </div>
     </div>

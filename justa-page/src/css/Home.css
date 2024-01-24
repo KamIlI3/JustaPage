@@ -39,7 +39,7 @@
   height: 100%;
   margin-right: 1%;
 }
-.AboutMe-content {
+.AboutMe-home-content {
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -48,7 +48,7 @@
   height: 100%;
   margin-left: 1%;
 } 
-.AboutMe {
+.AboutMe-home {
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -58,13 +58,13 @@
   margin: 3% 0 3% 0;
 }
 
-.AboutMe-img {
+.AboutMe-home-img {
   display: flex;
   justify-content: flex-start;
   width: 30%;
   margin-right: 1%;
 }
-.AboutMe-img img {
+.AboutMe-home-img img {
   height: 100%;
   width: 60%;
 }
