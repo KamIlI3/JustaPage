@@ -1,8 +1,10 @@
 // src/components/ContactForm.js
 import React, { useState } from "react";
 import "../../css/Contact.css";
+import useContactData from '../../hooks/useContactData';
 
 function ContactForm() {
+  const {imgURL, emailAdres} = useContactData();
   const [successMessage, setSuccessMessage] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,12 +54,16 @@ function ContactForm() {
     } else {
       setIsSubmitting(true);
       try {
+        const dataToSend = {
+          ...formData,
+          targetEmail: emailAdres // Dodajemy adres email do danych formularza
+        };
         const response = await fetch("http://localhost:3001/send", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(dataToSend),
         });
         const data = await response.text();
         setFormData({
@@ -84,7 +90,7 @@ function ContactForm() {
   return (
     <div className="Contact">
       <div className="Contact-img">
-        <img src="Justyna.jpg" alt="asd" />
+        <img src={imgURL} alt="asd" />
       </div>
       <div className="Contact-form">
         <form onSubmit={handleSubmit} className="Form">
@@ -135,7 +141,7 @@ function ContactForm() {
             <p className="msg-status success">{successMessage}</p>
           )}
 
-          {errorMessage && <p className="msg-status error">{errorMessage}</p>}
+          {errorMessage && (<p className="msg-status error">{errorMessage}</p>)}
         </form>
       </div>
     </div>

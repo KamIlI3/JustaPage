@@ -9,9 +9,9 @@ const galleryRouter = require("./routes/galleryRouter");
 const productsRouter = require("./routes/productsRouter");
 const formData = require("express-form-data");
 const emailValidator = require("email-validator");
+const contactRouter = require("./routes/contactRouter");
 
 const app = express();
-
 
 app.use(cors({ origin: "http://localhost:3000" }));
 app.use(bodyParser.json());
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/send", (req, res) => {
   let returnObj = {};
-  const { name, email, subject, message } = req.body;
+  const { name, email, subject, message, targetEmail } = req.body;
   if (!emailValidator.validate(email)) {
     if (!returnObj.errors) returnObj.errors = [];
     returnObj.errors.push("email");
@@ -57,7 +57,7 @@ app.post("/send", (req, res) => {
 
     const mailOptions = {
       from: email,
-      to: "kami3x3s@gmail.com",
+      to: targetEmail || "kami3x3s@gmail.com",
       subject: `${subject}`,
       text: `Wiadomość od: ${name}\nEmail: ${email}\n\n${message}`,
     };
@@ -67,7 +67,7 @@ app.post("/send", (req, res) => {
         console.log(error);
         res
           .status(500)
-          .send("Błąd podczas wysyłania e-maila. <br> Spróbuj ponownie.");
+          .send("Błąd podczas wysyłania e-maila. Spróbuj ponownie.");
       } else {
         console.log("Email wysłany: " + info.response);
         res.send("Wiadomość wysłana pomyślnie!");
@@ -80,6 +80,7 @@ app.use("/api/omnie", omnieRouter);
 app.use("/api/presentation", presentationRouter);
 app.use("/api/gallery", galleryRouter);
 app.use("/api/products", productsRouter);
+app.use("/api/contact", contactRouter);
 
 const PORT = process.env.PORT || 3001;
 
