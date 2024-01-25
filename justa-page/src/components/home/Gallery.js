@@ -1,22 +1,24 @@
-import React from 'react';
-import '../../css/Home.css';
-import useGalleryData from '../../hooks/useGalleryData';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "../../css/Home.css";
+import useGalleryData from "../../hooks/useGalleryData";
+import { Link } from "react-router-dom";
 
 function Gallery() {
-  const { images } = useGalleryData();
+  const { data } = useGalleryData();
   return (
-    <div className="Gallery">
+    <div className="Gallery-home">
       <h2>Efekty mojej pracy</h2>
 
-      <div className="Gallery-effects">
-        {images.map((image) => (
-          <div key={image.id} className="Gallery-img">
-            <img src={image.imgURL} alt="zdjecie z galerii" />
-          </div>
-        ))}
+      <div className="Gallery-home-effects">
+      {[...data].reverse().slice(-3).map((item) => (
+  <div key={item.id} className="Gallery-home-img">
+    <img src={item.imgURL} alt="zdjecie z galerii" />
+  </div>
+))}
       </div>
-      <Link to="/gallery" className="See-more">Zobacz więcej zdjęć</Link>
+      <Link to="/gallery" className="See-more">
+        Zobacz więcej zdjęć
+      </Link>
     </div>
   );
 }

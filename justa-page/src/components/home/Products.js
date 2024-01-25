@@ -6,13 +6,13 @@ function Products(){
     const {products} = useProductsData();
 
     return (
-        <div className='Products'>
+        <div className='Products-home'>
             {products.map((product, index) => (
-                <div key={product.id} className={`Products-item ${index % 2 !== 0 ? 'Products-item-reverse' : ''}`}>
-                    <div className='Products-item-img'>
+                <div key={product.id} className={`Products-home-item ${index % 2 !== 0 ? 'Products-home-item-reverse' : ''}`}>
+                    <div className='Products-home-item-img'>
                         <img src={product.product_imgURL} alt={product.name}/>
                     </div>
-                    <div className='Products-item-content'>
+                    <div className='Products-home-item-content'>
                         <h3>{product.name}</h3>
                         <p>{product.short_description}</p>
                         <a href='index.html' className='Find-out-more'>Dowiedz się więcej!</a>

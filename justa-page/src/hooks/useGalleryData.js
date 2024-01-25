@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 
 function useGalleryData() {
-  const [images, setImages] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3001/api/gallery")
       .then((response) => response.json())
-      .then((data) => {
-        setImages(data.slice(0, 3));
+      .then((fetchedData) => {
+        setData(fetchedData); // fetchedData powinno być tablicą
       })
-      .catch((error) => console.error("Error fetching gallery:", error));
+      .catch((error) => {
+        console.error("Error fetching gallery:", error);
+        setData([]); // Ustaw pustą tablicę w przypadku błędu
+      });
   }, []);
-  return { images };
+
+  return { data };
 }
+
 
 export default useGalleryData;
