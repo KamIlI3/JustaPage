@@ -9,17 +9,23 @@
 .Gallery-content{
     width: 60%;
     height: 100%;
-    display: flex;
-    flex-direction: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 10% 100px 100px 100px 100px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: start;
+    grid-gap: 10px;
 }
 .Gallery-image{
-    margin: 0 2% 0 2%;
-    width: 60%;
-    height: 10vw;
+    width: 5vw;
+    height: 100%;
 }
 .Gallery-image img{
     width: 100%;
-    height: 75%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
+.Gallery-image img:hover {
+    transform: scale(1.02);
+  }
