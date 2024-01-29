@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutMePage from './pages/AboutMePage'
-// import ShopPage from './pages/ShopPage'
+import ShopPage from './pages/ShopPage'
 // import CartPage from './pages/CartPage'
 import GalleryPage from './pages/GalleryPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -18,8 +18,8 @@ root.render(
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/aboutme" element={<AboutMePage />} />
-        {/* <Route path="/shop" element={<ShopPage />} />
-        <Route path="/cart" element={<CartPage />} /> */}
+        <Route path="/shop" element={<ShopPage />} />
+        {/* <Route path="/cart" element={<CartPage />} /> */}
         <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
     </BrowserRouter>

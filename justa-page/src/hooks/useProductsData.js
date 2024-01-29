@@ -7,7 +7,7 @@ function useProductsData(){
         fetch("http://localhost:3001/api/products")
         .then((response) => response.json())
         .then((data) => {
-            setNames(data.slice(0, 3));
+            setNames(data);
         })
         .catch((error) =>
         console.error("Error fetching products data:", error));

@@ -7,7 +7,7 @@ function Products(){
 
     return (
         <div className='Products-home'>
-            {products.map((product, index) => (
+            {products.slice().reverse().slice(0, 3).map((product, index) => (
                 <div key={product.id} className={`Products-home-item ${index % 2 !== 0 ? 'Products-home-item-reverse' : ''}`}>
                     <div className='Products-home-item-img'>
                         <img src={product.product_imgURL} alt={product.name}/>
