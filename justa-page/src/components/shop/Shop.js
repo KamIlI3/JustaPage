@@ -1,10 +1,11 @@
 import '../../css/Shop.css';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React,{useContext} from 'react';
 import useProductsData from '../../hooks/useProductsData';
+import { CartContext } from '../cart/CartContext';
 
 function Shop(){
     const {products} = useProductsData();
+    const { addToCart } = useContext(CartContext);
 
     return(
         <div className='Products'>
@@ -17,8 +18,8 @@ function Shop(){
                     </div>
                     <div className='Item-content'>
                         <h3>{product.name}</h3>
-                        <h4>{product.price}</h4>
-                        <Link to="/shop" className="Add-to-cart">Dodaj do koszyka</Link>
+                        <h4>{product.price}zł</h4>
+                        <button onClick={() => addToCart(product)} className="Add-to-cart">Dodaj do koszyka</button>
 
                     </div>
                 </div>

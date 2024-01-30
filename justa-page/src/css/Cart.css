@@ -1,0 +1,40 @@
+.Cart{
+    width: 100%;
+    display: flex;
+    min-height: 90vh;
+    align-items:center;
+    justify-content: center;
+}
+.Cart-content{
+    width: 60%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: flex-start;
+    background-color: red;
+}
+.Cart-item{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 35% 25% 10% 10% 10% 10%;
+    align-self: self-start;
+    align-items: center;
+}
+.Cart-item img{
+    width: 100%;
+    margin: 2px 0 2px 0;
+}
+.Cart-item > * {
+    text-align: center;
+    overflow: auto;
+}
+.Opis{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 60% 10% 10% 10% 10%;
+    align-self: self-start;
+    align-items: center;
+    text-align: center;
+}
