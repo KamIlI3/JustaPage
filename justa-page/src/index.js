@@ -8,6 +8,9 @@ import AboutMePage from './pages/AboutMePage'
 import ShopPage from './pages/ShopPage'
 import CartPage from './pages/CartPage'
 import GalleryPage from './pages/GalleryPage'
+import RegulaminPage from './pages/RegulaminPage';
+import PolitykaODOPage from './pages/PolitykaODOPage';
+import PolitykaPrywatnosciPage from './pages/PolitykaPrywatnosciPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/cart/CartContext';
 
@@ -23,6 +26,9 @@ root.render(
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path='/regulamin' element={<RegulaminPage />}/>
+        <Route path='/polityka-prywatnosci' element={<PolitykaPrywatnosciPage />}/>
+        <Route path='/polityka-odo' element={<PolitykaODOPage />}/>
       </Routes>
     </BrowserRouter>
     </CartProvider>
