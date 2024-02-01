@@ -43,7 +43,7 @@
     overflow: auto;
 }
 .Opis{
-    width: 70%;
+    width: 100%;
     display: grid;
     grid-template-columns: 60% 10% 10% 10% 10%;
     align-self: self-start;

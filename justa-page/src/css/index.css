@@ -98,3 +98,14 @@ code {
   padding: 2px 5px; 
   font-size: calc(3px + 1vmin); 
 }
+img{
+  animation: visable 3s;
+  animation-delay: 800ms;
+}
+@keyframes visable{
+  0%    { opacity: 0; }
+  100%   { opacity: 1; }
+}
+button, link{
+  cursor: pointer;
+}

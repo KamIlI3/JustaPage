@@ -19,12 +19,6 @@
 .PresImg{
   width: 25vw;
   height: 100%;
-  animation: visable 2s;
-  animation-delay: 800ms;
-}
-@keyframes visable{
-  0%    { opacity: 0; }
-  100%   { opacity: 1; }
 }
 .Presentation-img img {
   width: 100%;
