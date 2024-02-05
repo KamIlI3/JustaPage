@@ -1,25 +1,21 @@
 .AboutMe{
     display: flex;
     flex-direction: column;
-    height: 150vh;
+    justify-content: center;
+    align-items: center;
 }
 .AboutMe-lvl1,
 .AboutMe-lvl2{
     display: flex;
     flex-direction: row;
     width: 60%;
-    height: 50%;
     align-self: center;
 }
 .AboutMe-img,
 .AboutMe-presentation,
 .AboutMe-entry,
 .AboutMe-images{
-    width: 50%;
-}
-.AboutMe-images img{
-    width: 60%;
-    height: 60%;
+    width: calc(50% - 3%);
 }
 .AboutMe-entry{
     display: flex;
@@ -49,10 +45,10 @@
 }
 #img1{
     z-index: 1;
-    left: 30%;
+    left: 20%;
 }
 #img2{
-    left: 10%;
+    left: 5%;
     bottom: 10%;
 }
 .AboutMe-presentation{
@@ -63,3 +59,43 @@
     justify-content: center;
     align-items: center;
 }
+
+@media only screen and (max-width: 1300px) {
+    .AboutMe-lvl1,
+    .AboutMe-lvl2{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 0 2% 0;
+    }
+    .AboutMe-lvl2{
+        flex-direction: column-reverse;
+    }
+    .AboutMe-img,
+    .AboutMe-presentation,
+    .AboutMe-entry,
+    .AboutMe-images{
+        width: 100%;
+        margin: 0;
+    }
+    .AboutMe-images{
+        height: 50vh;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .AboutMe-images img{
+        position: absolute;
+        width: 40%;
+        height: 50%;
+    }#img1{
+        z-index: 1;
+        left: 15%;
+    }
+    #img2{
+        left: 35%;
+        top: 10%;
+    }
+  }

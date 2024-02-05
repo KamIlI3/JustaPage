@@ -108,6 +108,13 @@ code {
   padding: 2px 5px; 
   font-size: calc(3px + 1vmin); 
 }
+.FooterPages{
+  width: 100%;
+}
+.FooterPages-content{
+  width: 60%;
+  margin: 0 20% 0 20%;
+}
 img{
   animation: visable 3s;
   animation-delay: 800ms;
