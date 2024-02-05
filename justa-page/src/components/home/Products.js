@@ -15,7 +15,7 @@ function Products(){
                     <div className='Products-home-item-content'>
                         <h3>{product.name}</h3>
                         <p>{product.short_description}</p>
-                        <a href='index.html' className='Find-out-more'>Dowiedz się więcej!</a>
+                        <a href='index.html' className='Find-out-more'>Więcej informacji</a>
                     </div>
                 </div>
              ))}

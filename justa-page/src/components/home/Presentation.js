@@ -13,9 +13,8 @@ function Presentation() {
         <p>{content}</p>
       </div>
       <div className='Presentation-img'>
-        <div className='PresImg'>
         <img src={imgURL} alt='JustynaGawryś' />
-        </div>
+        
         
       </div>
     </div>

@@ -13,28 +13,31 @@ code {
 }
 
 .Nav {
-  text-align: s;
+  text-align: flex-start;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100%;
+  background-color: rgb(0, 158, 158);
+  
 }
 
 .Nav-title {
   display: flex;
   justify-content: flex-start;
-  font-size: calc(5px + 2vmin);
-  color: black;
-  width: 30%;
-  margin-left: 20%;
+  font-size: 30px;
+  width: 20%;
+  font-family: 'Protest Revolution', sans-serif;
+  color: antiquewhite;
 }
 .Nav-subpages {
-  width: 30%;
-  font-size: calc(5px + 2vmin);
+  width: 40%;
+  font-size: calc(10px + 2vmin);
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-end;
-  margin-right: 20%;
+  font: normal "Poppins", Helvetica, Arial, Verdana, sans-serif;
+  text-align: center;
 }
 
 .Nav-subpages a {
@@ -43,6 +46,12 @@ code {
   margin: 0 2% 0 2%;
   margin-block-start: 1em;
   margin-block-end: 1em;
+  align-self: center;
+  color: antiquewhite;
+  font-weight: 350;
+}
+.Nav-subpages a:hover{
+  color: palevioletred;
 }
 
 .SocialMedia{
@@ -63,6 +72,7 @@ code {
 .SocialMedia-icons a {
   margin: 0 10% 10% 10%;
   font-size: calc(15px + 2vmin);
+  color: antiquewhite;
 }
 .SocialMedia-icons a:hover {
   color: gold;
@@ -108,4 +118,25 @@ img{
 }
 button, link{
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+  body{
+    text-align: center;
+  }
+  .Nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Nav-title {
+    width: 60%;
+    justify-content: center;
+  }
+  .Nav-subpages {
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
