@@ -19,10 +19,10 @@ function NavMenu() {
         <Link to="/contact">Kontakt</Link>
         <Link to="/shop">Sklep</Link>
         <Link to="/cart">
-        <i id='cart-icon' className="fa-solid fa-cart-shopping"></i>
-          {totalQuantity > 0 && (
+        <i id='cart-icon' className="fa-solid fa-cart-shopping">{totalQuantity > 0 && (
             <span className="Product-count">{totalQuantity}</span>
-          )}
+          )}</i>
+          
         </Link>
       </div>
     </div>

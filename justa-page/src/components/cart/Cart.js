@@ -49,7 +49,7 @@ function Cart() {
           <div className="Cart-summary">
             <h2>Podsumowanie koszyka</h2>
             <label htmlFor="suma">SUMA</label>
-            <p name="suma">{totalValue}</p>
+            <p name="suma">{totalValue}zł</p>
             <button className="Go-to-payment">Przejdz do płatności</button>
           </div>
           </>

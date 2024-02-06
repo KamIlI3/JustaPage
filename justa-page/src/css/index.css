@@ -97,16 +97,18 @@ code {
 .Footer-informs a:hover {
   color: rgb(0, 158, 158);
 }
-
+#cart-icon{
+  position: relative;
+}
 .Product-count {
   position: absolute;
-  top: 3%; 
-  right: 20%; 
   background-color: red; 
   color: white; 
   border-radius: 50%; 
   padding: 2px 5px; 
   font-size: calc(3px + 1vmin); 
+  bottom:  75%;
+  left:  80%;
 }
 .FooterPages{
   width: 100%;
