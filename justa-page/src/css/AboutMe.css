@@ -10,6 +10,7 @@
     flex-direction: row;
     width: 60%;
     align-self: center;
+    padding: 2% 0 2% 0;
 }
 .AboutMe-img,
 .AboutMe-presentation,

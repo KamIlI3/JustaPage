@@ -27,6 +27,9 @@ function useContactForm() {
     ) {
       return " Temat musi zaczynać się z dużej litery";
     }
+    if (!formData.message) {
+      return " Treść jest wymagana";
+    }
     return null;
   };
 
@@ -49,6 +52,7 @@ function useContactForm() {
       setError(errorMsg);
       return;
     } else {
+      setError(null);
       setIsSubmitting(true);
       try {
         const dataToSend = {
@@ -62,6 +66,9 @@ function useContactForm() {
           },
           body: JSON.stringify(dataToSend),
         });
+        if (!response.ok) {
+          throw new Error("Błąd serwera");
+        }
         const data = await response.text();
         setFormData({
           name: "",

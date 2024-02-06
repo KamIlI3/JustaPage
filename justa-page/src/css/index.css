@@ -115,14 +115,14 @@ code {
   width: 60%;
   margin: 0 20% 0 20%;
 }
-img{
+/* img{
   animation: visable 3s;
   animation-delay: 800ms;
 }
 @keyframes visable{
   0%    { opacity: 0; }
   100%   { opacity: 1; }
-}
+} */
 button, link{
   cursor: pointer;
 }

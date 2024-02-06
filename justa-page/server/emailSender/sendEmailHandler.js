@@ -16,7 +16,7 @@ const sendEmailHandler = (req, res) => {
 
   if (subject === undefined || subject === "") {
     if (!returnObj.errors) returnObj.errors = [];
-    returnObj.errors.push("name");
+    returnObj.errors.push("subject");
   }
 
   if (message === undefined || message === "") {
@@ -25,7 +25,7 @@ const sendEmailHandler = (req, res) => {
   }
 
   if (returnObj.errors) {
-    res.send(JSON.stringify(returnObj));
+    res.status(400).json(returnObj);
   } else {
     const transporter = nodemailer.createTransport({
       service: "gmail",
