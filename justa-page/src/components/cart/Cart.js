@@ -31,14 +31,14 @@ function Cart() {
                   <div key={index} className="Cart-item">
                     <img src={item.product_imgURL} alt={item.name} />
                     <h3>{item.name}</h3>
-                    <p>{item.price} zł</p>
+                    <p>{parseFloat(item.price).toLocaleString("pl-PL", {style:"currency", currency:"PLN"})}</p>
                     <span>
                       <button onClick={() => addToCart(item, -1)}>-</button>
                       <p>{item.quantity}</p>
                       <button onClick={() => addToCart(item, 1)}>+</button>
                     </span>
 
-                    <p>{item.quantity * item.price} zł</p>
+                    <p>{parseFloat(item.quantity * item.price).toLocaleString("pl-PL", {style:"currency", currency:"PLN"})}</p>
                     <button onClick={() => removeFromCart(item)}>
                       <i className="fa-solid fa-trash"></i>
                     </button>
@@ -49,8 +49,8 @@ function Cart() {
           <div className="Cart-summary">
             <h2>Podsumowanie koszyka</h2>
             <label htmlFor="suma">SUMA</label>
-            <p name="suma">{totalValue}zł</p>
-            <button className="Go-to-payment">Przejdz do płatności</button>
+            <p name="suma">{parseFloat(totalValue).toLocaleString("pl-PL", {style:"currency", currency:"PLN"})}</p>
+            <button className="Go-to-payment">Przejdź do płatności</button>
           </div>
           </>
             )}
