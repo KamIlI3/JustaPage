@@ -7,7 +7,7 @@ import Gallery from '../components/home/Gallery';
 import Contact from '../components/home/Contact';
 import SocialMedia from '../components/common/SocialMedia';
 import Footer from '../components/common/footer';
-import Products from '../components/home/Products';
+// import Products from '../components/home/Products';
 
 function HomePage(){
   return(
@@ -15,7 +15,7 @@ function HomePage(){
         <NavMenu />
         <Presentation />
         <AboutMe />
-        <Products />
+        {/* <Products /> */}
         <Gallery />
         <Contact />
         <SocialMedia />

@@ -1,17 +1,18 @@
 import '../../css/Shop.css';
-import React,{useContext} from 'react';
-import useProductsData from '../../hooks/useProductsData';
-import { CartContext } from '../cart/CartContext';
+import React from 'react';
+// import { useContext } from 'react';
+// import useProductsData from '../../hooks/useProductsData';
+// import { CartContext } from '../cart/CartContext';
 
 function Shop(){
-    const {products} = useProductsData();
-    const { addToCart } = useContext(CartContext);
+    // const {products} = useProductsData();
+    // const { addToCart } = useContext(CartContext);
 
     return(
         <div className='Products'>
             
             <div className='Products-items'>
-            {products.map((product) => (
+            {/* {products.map((product) => (
                 <div key={product.id} className='Item'>
                     <div className='Item-img'>
                     <img src={product.product_imgURL} alt={product.name}/>
@@ -23,7 +24,7 @@ function Shop(){
 
                     </div>
                 </div>
-                ))}
+                ))} */}
             </div>
             
         </div>

@@ -9,6 +9,7 @@ const galleryRouter = require("./routes/galleryRouter");
 const productsRouter = require("./routes/productsRouter");
 const formData = require("express-form-data");
 const contactRouter = require("./routes/contactRouter");
+const coursesRouter = require("./routes/coursesRouter");
 
 require('dotenv').config();
 
@@ -27,6 +28,7 @@ app.use("/api/presentation", presentationRouter);
 app.use("/api/gallery", galleryRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/contact", contactRouter);
+app.use("/api/courses", coursesRouter)
 
 const PORT = process.env.PORT || 3001;
 

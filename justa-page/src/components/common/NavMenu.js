@@ -26,7 +26,7 @@ function NavMenu() {
         <Link to="/">Strona Główna</Link>
         <Link to="/aboutme">O Mnie</Link>
         <div className="dropdown-container" onMouseLeave={handleMouseLeave}>
-        <Link to="/course">Kurs <span className="sub-arrow" onMouseEnter={handleMouseEnter}><i className="fas fa-caret-down"></i></span></Link>
+        <Link to="/courses">Kurs <span className="sub-arrow" onMouseEnter={handleMouseEnter}><i className="fas fa-caret-down"></i></span></Link>
         {isDropdownOpen && (
         <div className={`dropdown-menu ${isDropdownOpen ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
           <Link to="/kursy/kurs1">Kurs 1</Link>
@@ -34,7 +34,7 @@ function NavMenu() {
         </div>
       )}
       </div>
-        <Link to="/gallery">Galeria</Link>
+        {/* <Link to="/gallery">Galeria</Link> */}
         <Link to="/contact">Kontakt</Link>
         <Link to="/shop">Sklep</Link>
         <Link to="/cart">
