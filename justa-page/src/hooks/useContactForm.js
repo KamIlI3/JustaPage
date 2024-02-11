@@ -41,13 +41,55 @@ function useContactForm() {
     message: "",
   });
 
+  const sendFormData = async ({e, name, email, subject, message }) => {
+    const formValues = {
+      name,
+      email,
+      subject,
+      message,
+    };
+    if (e && e.preventDefault) {
+      e.preventDefault();
+  }
+  let errorMsg = validate(formValues);
+  if (errorMsg) {
+    setError(errorMsg);
+    return;
+  } else {
+    setError(null);
+    setIsSubmitting(true);
+    try {
+      const dataToSend = {
+        ...formValues,
+        targetEmail: emailAdres 
+      };
+      const response = await fetch("http://localhost:3001/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend),
+      });
+      if (!response.ok) {
+        throw new Error("Błąd serwera");
+      }
+      console.log("Wysłano!")
+    } catch (error) {
+      console.log("Błąd podczas wysyłania. Spróbuj ponownie");
+    }finally {
+      setIsSubmitting(false); 
+    }
+  }
+};
+  
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const errorMsg = validate(formData);
+  const handleSubmit = async (e, courseName = null) => {
+        e.preventDefault();
+    let errorMsg = validate(formData);
     if (errorMsg) {
       setError(errorMsg);
       return;
@@ -91,7 +133,7 @@ function useContactForm() {
     }
   };
 
-  return { formData, handleChange, handleSubmit, imgURL, error, successMessage, errorMessage, isSubmitting };
+  return { formData, handleChange, handleSubmit, imgURL, error, successMessage, errorMessage, isSubmitting, sendFormData};
 }
 
 export default useContactForm;

@@ -29,8 +29,8 @@ function NavMenu() {
         <Link to="/courses">Kurs <span className="sub-arrow" onMouseEnter={handleMouseEnter}><i className="fas fa-caret-down"></i></span></Link>
         {isDropdownOpen && (
         <div className={`dropdown-menu ${isDropdownOpen ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
-          <Link to="/kursy/kurs1">Kurs 1</Link>
-          <Link to="/kursy/kurs2">Kurs 2</Link>
+          <Link to="/courses/kurs1">Kurs 1</Link>
+          <Link to="/courses/kurs2">Kurs 2</Link>
         </div>
       )}
       </div>

@@ -14,6 +14,7 @@ import PolitykaPrywatnosciPage from './pages/PolitykaPrywatnosciPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/cart/CartContext';
 import CoursesPage from './pages/CoursesPage';
+import Cours1Page from './pages/Cours1Page'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +28,7 @@ root.render(
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path='/courses' element={<CoursesPage />} />
+        <Route path='/courses/kurs1' element={<Cours1Page />} />
         {/* <Route path="/gallery" element={<GalleryPage />} /> */}
         <Route path='/regulamin' element={<RegulaminPage />}/>
         <Route path='/polityka-prywatnosci' element={<PolitykaPrywatnosciPage />}/>
