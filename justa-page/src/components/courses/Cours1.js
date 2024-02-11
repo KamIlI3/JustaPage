@@ -9,8 +9,7 @@ function Cours1() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const { sendFormData, isSubmitting} = useContactForm();
-
+  const { sendFormData, isSubmitting } = useContactForm();
 
   const submitApplication = async () => {
     const courseData = {
@@ -19,8 +18,10 @@ function Cours1() {
       subject: `Kurs: Kurs1`,
       message: "Chcę się zapisać na kurs.",
     };
-  
+
     await sendFormData(courseData);
+    setName("");
+    setEmail("");
   };
 
   return (
