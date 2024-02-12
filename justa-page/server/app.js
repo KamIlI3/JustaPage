@@ -10,12 +10,13 @@ const productsRouter = require("./routes/productsRouter");
 const formData = require("express-form-data");
 const contactRouter = require("./routes/contactRouter");
 const coursesRouter = require("./routes/coursesRouter");
+const opinionsRouter = require("./routes/opinionsRouter")
 
 require('dotenv').config();
 
 const app = express();
 const sendEmailHandler = require('./emailSender/sendEmailHandler');
-
+app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000" }));
 app.use(bodyParser.json());
 app.use(formData.parse());
@@ -29,6 +30,8 @@ app.use("/api/gallery", galleryRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/contact", contactRouter);
 app.use("/api/courses", coursesRouter)
+app.use("/api/opinions", opinionsRouter)
+
 
 const PORT = process.env.PORT || 3001;
 
