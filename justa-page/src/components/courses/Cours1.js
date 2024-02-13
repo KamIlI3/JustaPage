@@ -3,12 +3,13 @@ import "../../css/Courses.css";
 import useCoursesData from "../../hooks/useCoursesData";
 import useContactForm from "../../hooks/useContactForm";
 import ReactStars from "react-rating-stars-component";
-
+import useOpinionData from "../../hooks/useOpinionData";
 function Cours1() {
   const [activeTab, setActiveTab] = useState("description");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const {data} = useOpinionData();
   const { courses } = useCoursesData();
   const { sendFormData, isSubmitting } = useContactForm();
 
@@ -94,7 +95,7 @@ function Cours1() {
             </div>
 
             <div className="Cours1-lvl2">
-            <div className="line">
+                <div className="line">
                   <div className={`highlight ${activeTab}`}></div>
                 </div>
               <div className="Cours-tabs">
@@ -102,15 +103,38 @@ function Cours1() {
                 <button className={activeTab === 'description' ? 'active' : ''} onClick={() => setActiveTab("description")}>Opis</button>
                 <button className={activeTab === 'opinions' ? 'active' : ''} onClick={() => setActiveTab("opinions")}>Opinie</button>
               </div>
-              {activeTab === "description" && (
+              {activeTab === "description" && (<>
                 <div className="Cours-description">
                   <p>{cours.full_description}</p>
                 </div>
+                </>
               )}
               {activeTab === "opinions" && (
+                <>
                 <div className="Cours-opinion">
-                  {/* Tutaj wyświetl opinie */}
-                  <p>Opinie użytkowników...</p>
+                {data.map((opinion, index) => (
+                  <div key={index} className="Cours-opinion-display">
+                    <div className="Opinion-avatar">
+                    </div>
+                    <div className="Opinion-data">
+                      <h3>{opinion.nick}</h3>
+                      <ReactStars
+                        count={5}
+                        value={opinion.rating}
+                        edit={false}
+                        size={24}
+                        isHalf={true}
+                        emptyIcon={<i className="far fa-star"></i>}
+                        halfIcon={<i className="fa fa-star-half-alt"></i>}
+                        fullIcon={<i className="fa fa-star"></i>}
+                        activeColor="#ffd700"
+                      />
+                      {/* <p>{new Date(opinion.date).toLocaleDateString()}</p> */}
+                      <p><i>{opinion.opinion}</i></p>
+                    </div>
+                  </div>
+                ))}
+                </div>
 
                   <form onSubmit={handleSubmit}>
                     <ReactStars
@@ -145,11 +169,15 @@ function Cours1() {
                     ></input>
                     <button type="submit">Wyślij opinię</button>
                   </form>
-                </div>
+                </>
               )}
+              
             </div>
+            
           </div>
+          
         ))}
+
     </div>
   );
 }

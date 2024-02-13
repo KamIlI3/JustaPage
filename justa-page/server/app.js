@@ -11,6 +11,7 @@ const formData = require("express-form-data");
 const contactRouter = require("./routes/contactRouter");
 const coursesRouter = require("./routes/coursesRouter");
 const opinionsRouter = require("./routes/opinionsRouter")
+const displayOpinionRouter = require("./routes/displayOpinionRouter")
 
 require('dotenv').config();
 
@@ -31,6 +32,7 @@ app.use("/api/products", productsRouter);
 app.use("/api/contact", contactRouter);
 app.use("/api/courses", coursesRouter)
 app.use("/api/opinions", opinionsRouter)
+app.use("/api/opinions", displayOpinionRouter)
 
 
 const PORT = process.env.PORT || 3001;
