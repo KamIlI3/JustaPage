@@ -94,11 +94,13 @@ function Cours1() {
             </div>
 
             <div className="Cours1-lvl2">
+            <div className="line">
+                  <div className={`highlight ${activeTab}`}></div>
+                </div>
               <div className="Cours-tabs">
-                <button onClick={() => setActiveTab("description")}>
-                  Opis
-                </button>
-                <button onClick={() => setActiveTab("opinions")}>Opinie</button>
+              
+                <button className={activeTab === 'description' ? 'active' : ''} onClick={() => setActiveTab("description")}>Opis</button>
+                <button className={activeTab === 'opinions' ? 'active' : ''} onClick={() => setActiveTab("opinions")}>Opinie</button>
               </div>
               {activeTab === "description" && (
                 <div className="Cours-description">

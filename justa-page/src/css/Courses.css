@@ -74,6 +74,43 @@
     width: 100%;
     height: 100%;
 }
+
+.Cours-tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .Cours-tabs button {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  
+  .line {
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid #ccc;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    position: absolute;
+    top: 0px; /* Aby zasłonić cienką linię */
+    height: 3px; /* Grubość pogrubionej linii */
+    background-color: #000; /* Kolor pogrubionej linii */
+  }
+  
+  .highlight.description {
+    width: 60px; /* Długość linii nad przyciskiem 'Opis', dostosuj do rzeczywistej szerokości */
+    /* left: calc(0% - 80px); Pozycjonowanie linii, dostosuj do położenia przycisku */
+  }
+  
+  .highlight.opinions {
+    width: 70px; /* Długość linii nad przyciskiem 'Opinie', dostosuj do rzeczywistej szerokości */
+    left: calc(0% + 90px); /* Pozycjonowanie linii, dostosuj do położenia przycisku */
+  }
+  
 @media only screen and (max-width: 1300px) {
     .Courses-item{
         flex-direction: column;
