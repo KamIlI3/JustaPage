@@ -96,19 +96,18 @@
   
   .highlight {
     position: absolute;
-    top: 0px; /* Aby zasłonić cienką linię */
-    height: 3px; /* Grubość pogrubionej linii */
-    background-color: #000; /* Kolor pogrubionej linii */
+    top: 0px; 
+    height: 3px;
+    background-color: #000;
   }
   
   .highlight.description {
-    width: 60px; /* Długość linii nad przyciskiem 'Opis', dostosuj do rzeczywistej szerokości */
-    /* left: calc(0% - 80px); Pozycjonowanie linii, dostosuj do położenia przycisku */
+    width: 60px;
   }
   
   .highlight.opinions {
-    width: 70px; /* Długość linii nad przyciskiem 'Opinie', dostosuj do rzeczywistej szerokości */
-    left: calc(0% + 90px); /* Pozycjonowanie linii, dostosuj do położenia przycisku */
+    width: 70px; 
+    left: calc(0% + 90px);
   }
   
 @media only screen and (max-width: 1300px) {

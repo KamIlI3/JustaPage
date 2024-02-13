@@ -71,6 +71,7 @@ code {
   flex-direction: column;
   background-color: rgb(35, 35, 192);
   width: auto;
+  z-index: 1000;
 }
 .dropdown-menu.active a {
   width: 100%; 
@@ -142,14 +143,6 @@ code {
   width: 60%;
   margin: 0 20% 0 20%;
 }
-/* img{
-  animation: visable 3s;
-  animation-delay: 800ms;
-}
-@keyframes visable{
-  0%    { opacity: 0; }
-  100%   { opacity: 1; }
-} */
 button, link{
   cursor: pointer;
 }

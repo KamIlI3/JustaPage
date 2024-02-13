@@ -1,13 +1,13 @@
 const express = require('express');
-const GalleryModel = require('../../db/models/galleryModel');
+const SlidesModel = require('../../db/models/slidesModel');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
-    const gallery = await GalleryModel.find();
-    res.json(gallery);
+    const slides = await SlidesModel.find();
+    res.json(slides);
   } catch (error) {
-    console.error('Error fetching gallery:', error);
+    console.error('Error fetching slides:', error);
     res.status(500).send('Internal Server Error');
   }
 });
