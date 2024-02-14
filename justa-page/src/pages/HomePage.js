@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/index.css';
-import NavMenu from '../components/common/NavMenu';
 import Presentation from '../components/home/Presentation';
 import AboutMe  from '../components/home/Omnie';
 // import Gallery from '../components/home/Gallery';
@@ -12,7 +11,6 @@ import Products from '../components/home/Products';
 function HomePage(){
   return(
     <div>
-        <NavMenu />
         <Presentation />
         <AboutMe />
         <Products />
