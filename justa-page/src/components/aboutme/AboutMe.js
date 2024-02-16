@@ -12,7 +12,7 @@ function AboutMe() {
             <img src={data.imgURL} alt="justyna"/>
         </div>
         <div className='AboutMe-entry'>
-            <h2>O mnie</h2>
+        <img src='https://onedrive.live.com/embed?resid=BCC91EA560507C0D%2119670&authkey=%21AHQdMX-uSPhgfOw&width=1237&height=210' alt='omnieImg'></img>
             <p>{data.entry}</p>
         </div>
       </div>

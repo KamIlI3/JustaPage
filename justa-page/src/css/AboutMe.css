@@ -1,8 +1,6 @@
 .AboutMe{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .AboutMe-lvl1,
 .AboutMe-lvl2{
@@ -25,6 +23,10 @@
     align-items: center;
     margin-left: 3%;
 }
+.AboutMe-entry img{
+    width: 40%;
+    margin-top: 5%;
+}
 .AboutMe-img{
     margin: 0;
     margin-right: 3%;
@@ -36,7 +38,6 @@
     margin: 0;
     margin-left: 3%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 .AboutMe-images img{
@@ -84,8 +85,6 @@
     .AboutMe-images{
         height: 50vh;
         position: relative;
-        justify-content: center;
-        align-items: center;
     }
     .AboutMe-images img{
         position: absolute;
