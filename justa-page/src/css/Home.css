@@ -1,11 +1,4 @@
-.Nav{
-  width: 100%;
-  height: 12vh;
-  justify-content: center;
-  align-items: center;
-  background-color: blue;
-}
-.Nav-title {
+.Nav-title-home {
   z-index: 1000;
   position: absolute;
   left: 15%;
@@ -13,18 +6,18 @@
   font-family: 'Protest Revolution', sans-serif;
   color: antiquewhite;
 }
-.Nav-subpages {
+.Nav-subpages-home {
   z-index: 1000;
   position: absolute;
   font-size: calc(10px + 1.5vmin);
   right: 15%;
-  justify-content: flex-end;
+  height: 112px;
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   font: normal "Poppins", Helvetica, Arial, Verdana, sans-serif;
 }
-
-.Nav-subpages a {
+.Nav-subpages-home a {
   letter-spacing: 0.5px;
   text-decoration: none;
   margin: 0 2% 0 2%;
@@ -33,23 +26,23 @@
   color: antiquewhite;
   font-weight: 350;
   white-space: nowrap;
+  justify-content: space-between;
 }
-.Nav-subpages a:hover{
+.Nav-subpages-home a:hover{
   color: palevioletred;
 }
+
 .dropdown-container {
   display: flex;
   position: relative; 
   white-space: nowrap;
 }
-
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%; 
   left: 0;
 }
-
 .dropdown-menu.active {
   display: flex;
   flex-direction: column;
@@ -59,25 +52,20 @@
   z-index: 1000;
 }
 .dropdown-menu.active a {
-  width: 100%; 
-  text-align: left;
   box-sizing: border-box;
   white-space: nowrap;
+  margin: 10px 5px 10px 5px;
 }
+
 .Presentation{
   position: relative;
   width: 100%;
-  width: auto;
-  overflow: hidden;
   height: 85vh;
-}
-.Slides {
-  width: auto;
-  height: auto;
+  overflow: hidden;
 }
 .Slides-item {
   position: relative;
-  height: 85vh; 
+  height: 85vh;
 }
 .Slides-item img {
   width: 100%;
@@ -86,34 +74,29 @@
 }
 .slides-button{
   position: absolute;
-  width: 5vw;
-  height: 4vh;
-  background-color: black;
+  width: 80px;
+  height: 30px;
+  background-color: rgb(0, 0, 0, 0.8);
   color: wheat;
   z-index: 1000;
   bottom: 10px;
-  left: 50%;
+  left: calc(50% - 40px);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  border-radius: 7px;
+  align-self: center;
 }
 
-.AboutMe-home-content {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  justify-content: center;
-  width: calc(30% - 2%);
-  margin-left: 2%;
-} 
 .AboutMe-home {
-  background-color: white;
+  background-color: rgb(0, 158, 158);
   display: flex;
   flex-direction: row;
   align-self: center;
   justify-content: center;
   width: 100%;
-  margin: 3% 0 3% 0;
+  padding: 3% 0 3% 0;
 }
 
 .AboutMe-home-img {
@@ -125,6 +108,19 @@
 .AboutMe-home-img img {
   width: 60%;
 }
+.AboutMe-home-content {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: flex-start;
+  width: calc(30% - 2%);
+  margin-left: 2%;
+} 
+.AboutMe-home-content img{
+  width: 40%;
+  margin-top: 5%;
+}
+
 .Find-out-more {
   background-color: rgb(29, 27, 27);
   color: white;
@@ -141,12 +137,13 @@
 .Find-out-more:hover {
   transform: scale(1.02);
 }
+
 .Products-home{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(0, 158, 158);
+  background-color: white;
 }
 .Products-home-item{
   width: 60%;
@@ -193,50 +190,8 @@
   width: 100%;
 }
 
-.Gallery-home {
-  background-color: rgb(29, 27, 27);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: white;
-}
-
-.Gallery-home-effects {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  width: 60%;
-  margin: 0;
-}
-
-.Gallery-home-img {
-  width: 33vw;
-  height: 40vh;
-}
-.Gallery-home-img:nth-child(even) {
-  margin: 0 4% 0 4%;
-}
-.Gallery-home-img img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  border: 2px solid white;
-  transition: transform 0.3s ease-in-out;
-}
-.Gallery-home-img img:hover {
-  transform: scale(1.02);
-}
-.See-more {
-  color: white;
-  text-decoration: none;
-  padding: 1% 0 1% 0;
-}
-.See-more:hover {
-  color: rgb(0, 158, 158);
-}
-
 .Contact-ref {
-  background-color: white;
+  background-color: rgb(0, 158, 158);;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -277,12 +232,16 @@
   .Presentation{
     height: 50vh;
   }
-  
-  .Slides {
-    max-width: 90%;
-    margin: auto; 
-  }
   .Slides-item {
-    height: 45vh; 
+    height: 50vh; 
+  }
+  .Nav-title-home {
+    top: -8%;
+    left: calc(50% - 116.5px);
+  }
+  .Nav-subpages-home {
+    top: 5%;
+    justify-content: center;
+    left: calc(50% - 142.5px);
   }
 }

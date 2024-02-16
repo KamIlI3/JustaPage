@@ -78,12 +78,12 @@ code {
   white-space: nowrap;
 }
 .SocialMedia{
-  background-color: rgb(0, 158, 158);
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: black;
   font-size: calc(5px + 2vmin);
 }
 .SocialMedia-icons {
@@ -95,25 +95,25 @@ code {
 .SocialMedia-icons a {
   margin: 0 10% 10% 10%;
   font-size: calc(15px + 2vmin);
-  color: antiquewhite;
+  color: black;
 }
 .SocialMedia-icons a:hover {
   color: gold;
 }
 
 .Footer{
-  background-color: rgb(29, 27, 27);
+  background-color: rgb(0, 158, 158);;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 .Footer p {
-  font-size: calc(1px + 1.2vmin);
+  font-size: calc(2px + 1.2vmin);
   color: white;
 }
 .Footer-informs a {
-  font-size: calc(1px + 1.5vmin);
+  font-size: calc(2px + 1.5vmin);
   color: white;
   margin: 0 1% 0 1%;
 }

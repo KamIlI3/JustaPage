@@ -20,7 +20,7 @@ function Presentation() {
     autoplay: true, 
     autoplaySpeed: 5000, 
     swipeToSlide: true, 
-    adaptiveHeight: true 
+    adaptiveHeight: true,
   };
 
     const sklepBackground = data.find(item => item.description === 'sklep')?.imgURL;
@@ -41,10 +41,10 @@ function Presentation() {
   };
   return (
     <div className='Presentation'>
-      <div className="Nav-title">
+      <div className="Nav-title-home">
         <h3>Justyna Gawryś</h3>
       </div>
-      <div className="Nav-subpages">
+      <div className="Nav-subpages-home">
         <Link to="/">Strona Główna</Link>
         <Link to="/aboutme">O Mnie</Link>
         <div className="dropdown-container" onMouseLeave={handleMouseLeave}>

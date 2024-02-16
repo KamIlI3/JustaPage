@@ -109,6 +109,39 @@
     width: 70px; 
     left: calc(0% + 90px);
   }
+
+  .Cours-opinion-display{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .Opinion-avatar{
+    width: 10%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+  }
+  .Opinion-data{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    white-space: 0px;
+
+  }
+  .Opinion-data span{
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 20%;
+  }
+  .Opinion-data > * {
+    margin: 2px 0; /* Minimalny margines górny i dolny dla dzieci */
+  }
   
 @media only screen and (max-width: 1300px) {
     .Courses-item{

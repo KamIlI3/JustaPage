@@ -13,6 +13,10 @@ const opinionSchema = new mongoose.Schema({
       validator: Number.isInteger,
       message: '{VALUE} is not an integer value'
     }
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 

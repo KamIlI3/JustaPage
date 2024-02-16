@@ -115,8 +115,10 @@ function Cours1() {
                 {data.map((opinion, index) => (
                   <div key={index} className="Cours-opinion-display">
                     <div className="Opinion-avatar">
+                      <span><i class="fa-solid fa-circle-user fa-2xl"></i></span>
                     </div>
                     <div className="Opinion-data">
+                      <span>
                       <h3>{opinion.nick}</h3>
                       <ReactStars
                         count={5}
@@ -128,8 +130,8 @@ function Cours1() {
                         halfIcon={<i className="fa fa-star-half-alt"></i>}
                         fullIcon={<i className="fa fa-star"></i>}
                         activeColor="#ffd700"
-                      />
-                      {/* <p>{new Date(opinion.date).toLocaleDateString()}</p> */}
+                      /></span>
+                      <p>{new Date(opinion.date).toLocaleDateString()}</p>
                       <p><i>{opinion.opinion}</i></p>
                     </div>
                   </div>
