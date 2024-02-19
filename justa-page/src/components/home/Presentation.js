@@ -42,7 +42,7 @@ function Presentation() {
   return (
     <div className='Presentation'>
       <div className="Nav-title-home">
-        <h3>Justyna Gawryś</h3>
+        <h3 className="justyna-gawrys">Justyna Gawryś</h3>
       </div>
       <div className="Nav-subpages-home">
         <Link to="/">Strona Główna</Link>

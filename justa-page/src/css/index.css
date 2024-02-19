@@ -33,6 +33,7 @@ code {
   font-size: calc(10px + 1.5vmin);
   right: 15%;
   height: 112px;
+  width: 500px;
   justify-content: flex-end;
   align-items: center;
   display: flex;
@@ -80,48 +81,71 @@ code {
   box-sizing: border-box;
   white-space: nowrap;
 }
-.SocialMedia{
-  background-color: white;
+.Footer{
+  background-color: rgb(0, 136, 204);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: black;
-  font-size: calc(5px + 2vmin);
 }
-.SocialMedia-icons {
+.Home-Summary{
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-self: center;
-  justify-content: center;
 }
-.SocialMedia-icons a {
-  margin: 0 10% 10% 10%;
-  font-size: calc(15px + 2vmin);
-  color: black;
-}
-.SocialMedia-icons a:hover {
-  color: gold;
-}
-
-.Footer{
-  background-color: rgb(0, 158, 158);;
+.Social-media,
+.Menu,
+.Address{
+  color: rgb(51, 51, 51);
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  text-align: start;
 }
-.Footer p {
-  font-size: calc(2px + 1.2vmin);
+.justyna-gawrys{
+  font-family: 'Protest Revolution', sans-serif;
+}
+.Social-media *,
+.Menu *,
+.Address *{
+  margin: 5px 0 0 0;
+}
+.Social-media{
+  width: calc(45% - 5%);
+  margin-right: 5%;
+}
+.Social-media p{
+  color: rgb(51, 51, 51);
+  margin-bottom: 5px;
+}
+.Social-media span a {
+  font-size: 25px;
+  margin: 2px 10px 2px 0;
+  color: rgb(51, 51, 51);
+}
+.Social-media span a:hover {
   color: white;
 }
-.Footer-informs a {
-  font-size: calc(2px + 1.5vmin);
-  color: white;
+.Menu,
+.Address{
+  width: 27.5%;
+}
+.Menu a{
+  color: rgb(51, 51, 51);
+}
+.Statute{
+  margin-top: 40px;
+}
+.Footer p{
+  font-size: 12px;
+}
+.Footer a{
+  font-size: 13px;
+}
+.Footer-informs a{
+  color:rgb(0, 0, 0);
   margin: 0 1% 0 1%;
-}
-.Footer-informs a:hover {
-  color: rgb(0, 158, 158);
 }
 #cart-icon{
   position: relative;
@@ -162,7 +186,7 @@ button, link{
     top: -4%;
   }
   .Nav-subpages {
-    left: calc(50% - 155.5px);
+    left: calc(50% - 250px);
     justify-content: center;
     top: 3.5%;
   }

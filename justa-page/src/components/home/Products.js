@@ -14,6 +14,9 @@ function Products(){
                 {courses.map((course, index) => (
                 <div key={course.id} className={`Products-home-item ${index % 2 !== 0 ? 'Products-home-item-reverse' : ''}`}>
                     <div className='Products-home-item-img'>
+                    <div className='Little-circle-products'></div>
+                    <div className='Medium-circle-products'></div>
+                    <div className='Square-products'></div>
                         <img src={course.imgURL} alt={course.name}/>
                     </div>
                     <div className='Products-home-item-content'>
