@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useContactData from './useContactData';
+import useContactData from '../hooks/useContactData';
 function useContactForm() {
     const {imgURL, emailAdres} = useContactData();
   const [successMessage, setSuccessMessage] = useState(null);

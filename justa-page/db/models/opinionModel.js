@@ -8,11 +8,7 @@ const opinionSchema = new mongoose.Schema({
     type: Number,
     required: true,
     min: 1,
-    max: 5,
-    validate: {
-      validator: Number.isInteger,
-      message: '{VALUE} is not an integer value'
-    }
+    max: 5
   },
   date: {
     type: Date,

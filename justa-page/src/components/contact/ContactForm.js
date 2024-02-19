@@ -1,6 +1,6 @@
 // src/components/ContactForm.js
 import "../../css/Contact.css";
-import useContactForm from '../../hooks/useContactForm';
+import useContactForm from '../../utils/useContactForm';
 
 function ContactForm() {
     const {

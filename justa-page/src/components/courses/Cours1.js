@@ -1,54 +1,23 @@
 import React, { useState } from "react";
 import "../../css/Courses.css";
 import useCoursesData from "../../hooks/useCoursesData";
-import useContactForm from "../../hooks/useContactForm";
+import useContactForm from "../../utils/useContactForm";
 import ReactStars from "react-rating-stars-component";
 import useOpinionData from "../../hooks/useOpinionData";
+import useOpinionFrom from "../../utils/useOpinionForm"
+import  useSubmitForm  from "../../utils/useSubmitForm";
 function Cours1() {
-  const [activeTab, setActiveTab] = useState("description");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
+  const { handleSubmit, ratingChanged, nick, setNick, opinionEmail, setOpinionEmail, opinion, setOpinion} = useOpinionFrom();
+  const { submitApplication, name, setName, email, setEmail  } = useSubmitForm();
   const {data} = useOpinionData();
-  const { courses } = useCoursesData();
-  const { sendFormData, isSubmitting } = useContactForm();
+  const {courses} = useCoursesData();
+  const {isSubmitting} = useContactForm();
+  const [activeTab, setActiveTab] = useState("description");
+  const averageRating = data.length > 0
+    ? data.reduce((sum, opinion) => sum + opinion.rating, 0) / data.length
+    : 0;
 
-  const submitApplication = async () => {
-    const courseData = {
-      name: name,
-      email: email,
-      subject: `Kurs: Kurs1`,
-      message: "Chcę się zapisać na kurs.",
-    };
-    await sendFormData(courseData);
-    setName("");
-    setEmail("");
-  };
 
-  const [rating, setRating] = useState(0);
-  const [nick, setNick] = useState("");
-  const [opinionEmail, setOpinionEmail] = useState("");
-  const [opinion, setOpinion] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await fetch("http://localhost:3001/api/opinions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ opinionEmail, nick, opinion, rating }),
-    });
-
-    if (response.ok) {
-      setNick("");
-      setOpinionEmail("");
-      setOpinion("");
-    }
-  };
-  const ratingChanged = (newRating) => {
-    setRating(newRating);
-  };
 
   return (
     <div className="Cours">
@@ -61,6 +30,17 @@ function Cours1() {
                 <img src={cours.imgURL} alt={cours.name} />
               </div>
               <div className="Cours-apply">
+              <ReactStars
+                        count={5}
+                        value={averageRating}
+                        edit={false}
+                        size={24}
+                        isHalf={true}
+                        emptyIcon={<i className="far fa-star"></i>}
+                        halfIcon={<i className="fa fa-star-half-alt"></i>}
+                        fullIcon={<i className="fa fa-star"></i>}
+                        activeColor="blue"
+                      />
                 <h3>{cours.name}</h3>
                 <p>zapisz sie na kurs</p>
                 <form
@@ -74,6 +54,7 @@ function Cours1() {
                     placeholder="Imie"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
                   ></input>
 
                   <input
@@ -81,6 +62,7 @@ function Cours1() {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   ></input>
 
                   <button
@@ -115,7 +97,7 @@ function Cours1() {
                 {data.map((opinion, index) => (
                   <div key={index} className="Cours-opinion-display">
                     <div className="Opinion-avatar">
-                      <span><i class="fa-solid fa-circle-user fa-2xl"></i></span>
+                      <img src="https://secure.gravatar.com/avatar/dba6969f85dee4dbd385debf1a25000b?s=60&d=mm&r=g" alt="user" />
                     </div>
                     <div className="Opinion-data">
                       <span>
@@ -129,16 +111,17 @@ function Cours1() {
                         emptyIcon={<i className="far fa-star"></i>}
                         halfIcon={<i className="fa fa-star-half-alt"></i>}
                         fullIcon={<i className="fa fa-star"></i>}
-                        activeColor="#ffd700"
+                        activeColor="blue"
                       /></span>
-                      <p>{new Date(opinion.date).toLocaleDateString()}</p>
+                      <p id="date">{new Date(opinion.date).toLocaleDateString()}</p>
                       <p><i>{opinion.opinion}</i></p>
                     </div>
                   </div>
                 ))}
                 </div>
 
-                  <form onSubmit={handleSubmit}>
+                  <form className="Opinion-form" onSubmit={handleSubmit}>
+                    <label>Ocena:</label>
                     <ReactStars
                       count={5} 
                       onChange={ratingChanged} 
@@ -147,27 +130,35 @@ function Cours1() {
                       emptyIcon={<i className="far fa-star"></i>}
                       halfIcon={<i className="fa fa-star-half-alt"></i>}
                       fullIcon={<i className="fa fa-star"></i>} 
-                      activeColor="#ffd700" 
+                      activeColor="blue" 
+                      required
                     />
+                    <label htmlFor="nick">Nazwa:</label>
                     <input
+                    id="nick"
                       type="text"
                       value={nick}
                       onChange={(e) => setNick(e.target.value)}
-                      placeholder="Twoje imię"
+                      placeholder="Twoje nazwa"
                       required
                     />
+                    <label htmlFor="opinion">Opinia:</label>
                     <textarea
+                    id="opiniion"
                       value={opinion}
                       onChange={(e) => setOpinion(e.target.value)}
                       placeholder="Twoja opinia"
                       required
                     />
+                    <label htmlFor="email">Email:</label>
                     <input
                       type="email"
                       name="email"
                       id="email"
+                      placeholder="Email"
                       value={opinionEmail}
                       onChange={(e) => setOpinionEmail(e.target.value)}
+                      required
                     ></input>
                     <button type="submit">Wyślij opinię</button>
                   </form>

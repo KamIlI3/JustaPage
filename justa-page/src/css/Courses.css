@@ -54,11 +54,11 @@
 .Cours-lvl1{
     display: flex;
     flex-direction: row;
-    height: 40%;
+    height: 40vh;
     width: 100%;
 }
 .Cours-lvl2{
-    height: 60%;
+    height: auto;
     width: 100%;
 }
 .Cours-img{
@@ -82,8 +82,9 @@
   }
   
   .Cours-tabs button {
-    margin: 10px;
-    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin: 0 5px 10px 5px;
   }
   
   .line {
@@ -91,7 +92,7 @@
     margin-top: 15px;
     border-top: 1px solid #ccc;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .highlight {
@@ -102,48 +103,77 @@
   }
   
   .highlight.description {
-    width: 60px;
+    width: 39.5px;
   }
   
   .highlight.opinions {
-    width: 70px; 
-    left: calc(0% + 90px);
+    width: 50.5px; 
+    left: calc(0% + 50px);
   }
-
-  .Cours-opinion-display{
-    height: 10vh;
+  
+  .Cours-opinion-display {
     display: flex;
-    flex-direction: row;
+  }
+  
+  .Opinion-data {
+    flex: 70%;
+    padding-left: 10px; 
+    background-color: red;
+    min-height: 15vh;
+  }
+  .Opinion-data span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Opinion-data h3 {
+    margin: 0; 
+  }
+  .Opinion-data p {
+    margin: 5px 0;
+  }
+  #date{
+    font-size: 12px;
   }
   .Opinion-avatar{
-    width: 10%;
+    width: 90px;
     font-size: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: red;
+    background-color: blue;
+    border: #000 solid 2px;
+    min-height: 15vh;
   }
-  .Opinion-data{
-    height: 100%;
+  .Opinion-avatar img{
+    margin-top: 10%;
+    height: 70px;
+    border-radius: 60%;
+  }
+  .Opinion-form{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
-    white-space: 0px;
-
+    width: 100%;
   }
-  .Opinion-data span{
+  .Opinion-form input,
+  .Opinion-form textarea{
+    margin-top: 10px;
+    height: 20px;
+    width: 100%;
+  }
+  .Opinion-form textarea{
+    height: 200px;
+    resize: none;
+  }
+  .Opinion-form button{
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
-    margin: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 20%;
-  }
-  .Opinion-data > * {
-    margin: 2px 0; /* Minimalny margines górny i dolny dla dzieci */
+    align-self: flex-start;
   }
   
-@media only screen and (max-width: 1300px) {
+  
+@media only screen and (max-width: 1200px) {
     .Courses-item{
         flex-direction: column;
     }
@@ -155,5 +185,28 @@
         display: flex;
         align-items: center;
     }
+    .Opinion-data{
+      text-align: start;
+    }
+    .Cours-lvl1{
+      flex-direction: column;
+      height: 70%;
+      width: 100%;
+  }
+  .Cours-img{
+    height: 100%;
+    width: 100%;
+    margin: 2% 0 0 0;
+}
+.Cours-apply{
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+.Cours-img img{
+    width: 100%;
+    height: 100%;
+}
     
   }
