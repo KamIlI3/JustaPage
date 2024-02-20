@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState} from "react";
 import "../../css/Home.css";
 import useSlidesData from "../../hooks/useSlidesData";
 import { Link } from "react-router-dom";
@@ -48,6 +48,7 @@ function Presentation() {
   const handleMouseClick = () => {
     setIsShowMenuActive(!isShowMenuActive);
   };
+    
 
   return (
     <div className="Presentation">
@@ -60,9 +61,7 @@ function Presentation() {
         <button className="Show-menu-bar" onClick={handleMouseClick}><i className="fa-solid fa-bars fa-xl"></i></button>
       )}
       <div
-        className={`Nav-subpages-home ${
-          isShowMenuActive ? "Nav-subpages-home-active" : ""
-        }`}
+        className={`Nav-subpages-home ${isShowMenuActive ? "Nav-subpages-home-active" : "" }`}
       >
         <Link to="/">Strona Główna</Link>
         <Link to="/aboutme">O Mnie</Link>

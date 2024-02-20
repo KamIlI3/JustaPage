@@ -16,8 +16,8 @@ function Footer(){
                     <span>
                         <a href='https://www.instagram.com/justynagawrys_makeup/' target='blank'><i className="fa-brands fa-instagram "></i></a>
                         <a href='https://www.facebook.com/JustynaGawrysMakeup' target='blank'><i className="fa-brands fa-facebook "></i></a>
-                        <a href='https://www.youtube.com/channel/UCdKZrXANzHS3ntcBM8o_gkA/videos' target='blank'><i class="fa-brands fa-youtube"></i></a>
-                        <a href='https://www.tiktok.com/@justyna.gawrys' target='blank'><i class="fa-brands fa-tiktok"></i></a>
+                        <a href='https://www.youtube.com/channel/UCdKZrXANzHS3ntcBM8o_gkA/videos' target='blank'><i className="fa-brands fa-youtube"></i></a>
+                        <a href='https://www.tiktok.com/@justyna.gawrys' target='blank'><i className="fa-brands fa-tiktok"></i></a>
                     </span>
                 </div>
                 <div className='Menu'>
