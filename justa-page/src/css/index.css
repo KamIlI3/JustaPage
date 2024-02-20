@@ -16,7 +16,7 @@ code {
   height: 70px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 136, 204);
+  background-color: white;
 }
 .Nav-title {
   z-index: 1000;
@@ -25,7 +25,7 @@ code {
   top: -2.5%;
   font-size: 30px;
   font-family: 'Protest Revolution', sans-serif;
-  color: antiquewhite;
+  color: rgb(0, 51, 102);
 }
 .Nav-subpages {
   z-index: 1000;
@@ -47,7 +47,7 @@ code {
   margin: 0 2% 0 2%;
   margin-block-start: 1.5em;
   margin-block-end: 1em;
-  color: antiquewhite;
+  color: rgb(0, 51, 102);
   font-weight: 350;
   white-space: nowrap;
 }

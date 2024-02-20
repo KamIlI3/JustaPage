@@ -66,8 +66,7 @@ function Presentation() {
         <Link to="/">Strona Główna</Link>
         <Link to="/aboutme">O Mnie</Link>
         <div className="dropdown-container" onMouseLeave={handleMouseLeave}>
-          <Link to="/courses">
-            Kurs{" "}
+          <Link to="/courses">Kurs{" "}
             <span className="sub-arrow" onMouseEnter={handleMouseEnter}><i className="fas fa-caret-down"></i></span>
           </Link>
           {isDropdownOpen && (
@@ -82,33 +81,25 @@ function Presentation() {
         </div>
         <Link to="/contact">Kontakt</Link>
         <Link to="/shop">Sklep</Link>
-        <Link to="/cart">
-          <i id="cart-icon" className="fa-solid fa-cart-shopping">
+        <Link to="/cart"><i id="cart-icon" className="fa-solid fa-cart-shopping">
             {totalQuantity > 0 && (
               <span className="Product-count">{totalQuantity}</span>
             )}
-          </i>
-        </Link>
+          </i></Link>
       </div>
       <div className="Slides">
         <Slider {...settings}>
           <div className="Slides-item" id="shop-slide">
             <img src={sklepBackground} alt="sklep"></img>
-            <Link to="/shop" className="slides-button">
-              Sklep
-            </Link>
+            <Link to="/shop" className="slides-button"> Sklep</Link>
           </div>
           <div id="aboutme-slide" className="Slides-item">
             <img src={omnieBackground} alt="o_mnie" />
-            <Link to="/aboutme" className="slides-button">
-              O mnie
-            </Link>
+            <Link to="/aboutme" className="slides-button">O mnie</Link>
           </div>
           <div id="contact-slide" className="Slides-item">
             <img src={kontaktBackground} alt="kontakt" />
-            <Link to="/contact" className="slides-button">
-              Kontakt
-            </Link>
+            <Link to="/contact" className="slides-button">Kontakt</Link>
           </div>
         </Slider>
       </div>

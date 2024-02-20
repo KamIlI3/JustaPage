@@ -2,6 +2,15 @@
     display: flex;
     flex-direction: column;
 }
+.Front-img{
+    width: 100%;
+    height: 40vh;
+}
+.Front-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .AboutMe-lvl1,
 .AboutMe-lvl2{
     display: flex;
@@ -30,9 +39,11 @@
 .AboutMe-img{
     margin: 0;
     margin-right: 3%;
+    height: 95vh;
 }
 .AboutMe-img img{
-    width: 70%;
+    width: 100%;
+    height: 100%;
 }
 .AboutMe-images{
     margin: 0;
