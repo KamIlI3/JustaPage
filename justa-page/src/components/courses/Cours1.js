@@ -21,6 +21,9 @@ function Cours1() {
 
   return (
     <div className="Cours">
+      <div className='Front-img'>
+        <h1>Kurs makijażu</h1>
+        <img src='https://images.unsplash.com/photo-1487412912498-0447578fcca8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjQ3fDB8MXxzZWFyY2h8MTh8fE1ha2V1cCUyMEFwcGxpY2F0aW9ufGVufDB8fHx8MTcwODQ1NTY5M3ww&ixlib=rb-4.0.3&q=80&w=1620' alt="zdjecie"/></div>
       {courses
         .filter((cours) => cours.id === 1)
         .map((cours) => (
@@ -39,17 +42,16 @@ function Cours1() {
                         emptyIcon={<i className="far fa-star"></i>}
                         halfIcon={<i className="fa fa-star-half-alt"></i>}
                         fullIcon={<i className="fa fa-star"></i>}
-                        activeColor="blue"
+                        activeColor="rgb(0, 136, 204)"
                       />
                 <h3>{cours.name}</h3>
                 <p>zapisz sie na kurs</p>
-                <form
-                  onSubmit={(e) => {
+                <form onSubmit={(e) => {
                     e.preventDefault();
                     submitApplication();
-                  }}
-                >
+                  }}>
                   <input
+                    id="name-course-application"
                     type="text"
                     placeholder="Imie"
                     value={name}
@@ -58,6 +60,7 @@ function Cours1() {
                   ></input>
 
                   <input
+                    id="email-course-application"
                     type="email"
                     placeholder="Email"
                     value={email}
@@ -66,6 +69,7 @@ function Cours1() {
                   ></input>
 
                   <button
+                    id="button-course-application"
                     type="submit"
                     className={isSubmitting ? "loading" : ""}
                     disabled={isSubmitting}
@@ -111,7 +115,7 @@ function Cours1() {
                         emptyIcon={<i className="far fa-star"></i>}
                         halfIcon={<i className="fa fa-star-half-alt"></i>}
                         fullIcon={<i className="fa fa-star"></i>}
-                        activeColor="blue"
+                        activeColor="rgb(0, 136, 204)"
                       /></span>
                       <p id="date">{new Date(opinion.date).toLocaleDateString()}</p>
                       <p><i>{opinion.opinion}</i></p>
@@ -130,7 +134,7 @@ function Cours1() {
                       emptyIcon={<i className="far fa-star"></i>}
                       halfIcon={<i className="fa fa-star-half-alt"></i>}
                       fullIcon={<i className="fa fa-star"></i>} 
-                      activeColor="blue" 
+                      activeColor="rgb(0, 136, 204)" 
                       required
                     />
                     <label htmlFor="nick">Nazwa:</label>
@@ -139,7 +143,6 @@ function Cours1() {
                       type="text"
                       value={nick}
                       onChange={(e) => setNick(e.target.value)}
-                      placeholder="Twoje nazwa"
                       required
                     />
                     <label htmlFor="opinion">Opinia:</label>
@@ -147,7 +150,6 @@ function Cours1() {
                     id="opiniion"
                       value={opinion}
                       onChange={(e) => setOpinion(e.target.value)}
-                      placeholder="Twoja opinia"
                       required
                     />
                     <label htmlFor="email">Email:</label>
@@ -155,12 +157,11 @@ function Cours1() {
                       type="email"
                       name="email"
                       id="email"
-                      placeholder="Email"
                       value={opinionEmail}
                       onChange={(e) => setOpinionEmail(e.target.value)}
                       required
                     ></input>
-                    <button type="submit">Wyślij opinię</button>
+                    <button type="submit">Dodaj</button>
                   </form>
                 </>
               )}
