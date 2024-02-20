@@ -33,7 +33,7 @@
   justify-content: space-between;
 }
 .Nav-subpages-home a:hover{
-  color: palevioletred;
+  color: rgb(0, 91, 150);
 }
 .dropdown-menu {
   display: none;
@@ -85,6 +85,10 @@
   justify-content: center;
   text-decoration: none;
   align-self: center;
+}
+.slides-button:hover{
+  border-color: rgb(0, 91, 150);
+  color: rgb(0, 91, 150);
 }
 
 .AboutMe-home {

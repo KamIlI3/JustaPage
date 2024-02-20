@@ -1,19 +1,56 @@
 .Contact{
-    height: 79.4vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
-  .Contact-img,
-  .Contact-form{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .Contact-img img{
+  .Front-img{
+    position: relative;
     width: 100%;
+    height: 40vh;
+  }
+  .Front-img h1{
+    position: absolute;
+    z-index: 1;
+    color: antiquewhite;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 6rem;
+    left: 20%;
+    top: 25%;
+  }
+  .Front-img img{
     height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .Contact-content{
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    width: 70%;
+    align-items: center;
+    align-self: center;
+  }
+  .Contact-data,
+  .Contact-form{
+    color: rgb(0, 51, 102);
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .Contact-data h2{
+    font-size: 3rem;
+  }
+  .Contact-form{
+    background-color: rgb(0, 51, 102);
+    color: white;
+  }
+  .Contact-form h2{
+    color: white;
+    font-size: 3rem;
+    align-self: center;
   }
   .Form{
     position: relative;
@@ -29,7 +66,6 @@
   .Form textarea{
     width: 100%;
     height: 25px;
-    border-color: rgb(0, 158, 158);
     margin-bottom: 20px;
   }
   .Form textarea{
@@ -37,49 +73,26 @@
     resize: none;
   }
   .Form button{
-    align-self: center;
-    margin: 5px;
-    width: 70px;
+    background-color: rgba(89, 184, 243, 0.6);
+    border: none;
+    border-radius: 0px;
     height: 30px;
-    border-radius: 15px;
-    background-color: rgb(0, 158, 158);
+    color: antiquewhite;
   }
   .Form button:hover{
-    background-color: rgb(0, 107, 107);
-  }
-
-  .msg-status{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    padding: 20px;
-    width: 300px;
-    border-radius: 12px;
-    font-size: 20px;
-  }
-  .success{
-    position: absolute;
-    display: flex;
-    background-color: hsl(143, 83%, 55%);
-    bottom: 1%;
-  }
-  .error{
-    position: absolute;
-    display: flex;
-    background-color: hsl(9, 100%, 64%);
-    bottom: 1%;
+    background-color: rgb(0, 91, 150);
   }
   .error-message{
     width: 300px;
-    height: 100px;
-    background-color: rgb(247, 196, 196);
+    height: 6vh;
+    background-color: rgba(140, 206, 247, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
     position: absolute;
     top: 1%;
+    margin-bottom: 1%;
   }
 
   .loading {
@@ -115,17 +128,24 @@
 @media only screen and (max-width: 850px) {
   .Contact{
     height: auto;
-    min-height: 81.2vh;
     flex-direction: column;
   }
-  .Contact-img,
+  .Contact-content{
+    flex-direction: column;
+  }
+  .Contact-data,
   .Contact-form{
     width: 100%;
-    align-self: center;
   }
-  .Form{
-    align-self: center;
-    padding: 100px 0 100px 0;
+  .Contact-data{
+    align-items: center;
+    height: 55vh;
   }
-  
+  .Contact-form{
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+  }
+  .Contact-form h2{
+    margin-top: 20%;
+  }
 }

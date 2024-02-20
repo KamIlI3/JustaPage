@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import useContactData from '../hooks/useContactData';
 function useContactForm() {
-    const {imgURL, emailAdres} = useContactData();
-  const [successMessage, setSuccessMessage] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(null);
+  const {imgURL, emailAdres} = useContactData();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const reg = /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
@@ -118,22 +116,16 @@ function useContactForm() {
           subject: "",
           message: "",
         });
-        setSuccessMessage(data);
-        setTimeout(() => {
-          setSuccessMessage(null);
-        }, 3000);
+        console.log(data)
       } catch (error) {
-        setErrorMessage("Błąd podczas wysyłania. Spróbuj ponownie");
-        setTimeout(() => {
-          setErrorMessage(null);
-        }, 3000);
+        console.log("Błąd podczas wysyłania. Spróbuj ponownie");
       }finally {
         setIsSubmitting(false); 
       }
     }
   };
 
-  return { formData, handleChange, handleSubmit, imgURL, error, successMessage, errorMessage, isSubmitting, sendFormData};
+  return { formData, handleChange, handleSubmit, imgURL, error, isSubmitting, sendFormData};
 }
 
 export default useContactForm;

@@ -52,7 +52,7 @@ code {
   white-space: nowrap;
 }
 .Nav-subpages a:hover{
-  color: palevioletred;
+  color: rgb(0, 91, 150);
 }
 .dropdown-container {
   display: flex;

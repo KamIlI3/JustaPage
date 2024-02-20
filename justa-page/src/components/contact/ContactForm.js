@@ -3,17 +3,23 @@ import "../../css/Contact.css";
 import useContactForm from '../../utils/useContactForm';
 
 function ContactForm() {
-    const {
-      formData, handleChange, handleSubmit, imgURL, error, successMessage, errorMessage, isSubmitting
-    } = useContactForm();
+    const { formData, handleChange, handleSubmit, error, isSubmitting } = useContactForm();
 
   return (
     <div className="Contact">
-      <div className="Contact-img">
-        <img src={imgURL} alt="asd" />
+      <div className='Front-img'>
+        <h1>Kontakt</h1>
+        <img src='https://images.unsplash.com/photo-1547887538-047f814bfb64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjQ3fDB8MXxzZWFyY2h8MTF8fG1ha2V1cCUyMHByb2R1Y3RzfGVufDB8fHx8MTcwODQyOTc2OHww&ixlib=rb-4.0.3&q=80&w=720' alt="zdjecie"/></div>
+      <div className="Contact-content">
+      <div className="Contact-data">
+        <h2>Skontaktuj się ze mną</h2>
+        <h3><i className="fa-solid fa-location-dot fa-2xl"></i> Sowiogórska 2/2, Dzierżoniów 58-200</h3>
+        <h3><i className="fa-regular fa-envelope fa-2xl"></i> info@brand.pl</h3>
+        <h3><i className="fa-solid fa-phone-volume fa-2xl"></i> (+48) 123-456-789</h3>
       </div>
       <div className="Contact-form">
         <form onSubmit={handleSubmit} className="Form">
+          <h2>Napisz do mnie</h2>
           {error && (
             <div className="error-message"><p><i className="fa-solid fa-circle-info"></i>{error}</p></div>
           )}
@@ -56,13 +62,8 @@ function ContactForm() {
           />
 
           <button type="submit" className={isSubmitting ? 'loading' : ''} disabled={isSubmitting}>Wyślij</button>
-
-          {successMessage && (
-            <p className="msg-status success">{successMessage}</p>
-          )}
-
-          {errorMessage && (<p className="msg-status error">{errorMessage}</p>)}
         </form>
+      </div>
       </div>
     </div>
   );
