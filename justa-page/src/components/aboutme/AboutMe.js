@@ -7,7 +7,9 @@ function AboutMe() {
   
   return (
     <div className="AboutMe">
-            <div className='Front-img'><img src='https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjQ3fDB8MXxzZWFyY2h8MTZ8fG1ha2V1cCUyMHByb2R1Y3RzfGVufDB8fHx8MTcwODQyOTc2OHww&ixlib=rb-4.0.3&q=80&w=1619' alt="zdjecie"/></div>
+      <div className='Front-img'>
+        <h1>O mnie</h1>
+        <img src='https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjQ3fDB8MXxzZWFyY2h8MTZ8fG1ha2V1cCUyMHByb2R1Y3RzfGVufDB8fHx8MTcwODQyOTc2OHww&ixlib=rb-4.0.3&q=80&w=1619' alt="zdjecie"/></div>
       <div className='AboutMe-lvl1'>
         <div className='AboutMe-img'>
             <img src={data.imgURL} alt="justyna"/>

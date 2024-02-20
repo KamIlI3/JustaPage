@@ -48,7 +48,7 @@ code {
   margin-block-start: 1.5em;
   margin-block-end: 1em;
   color: rgb(0, 51, 102);
-  font-weight: 350;
+  font-weight: 400;
   white-space: nowrap;
 }
 .Nav-subpages a:hover{
@@ -226,7 +226,7 @@ img{
 
 @media only screen and (max-width: 650px) {
   .Nav{
-    height: 25vh;
+    height: 26vh;
   }
   .Nav-title {
     left: 3%;
