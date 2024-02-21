@@ -24,7 +24,7 @@ function Shop(){
                     </div>
                     <div className='Item-content'>
                         <h3>{cours.name}</h3>
-                        <Link to={cours.reference} className='Find-out-more'>Zobacz więcej!</Link>
+                        <Link to={cours.reference}>Zobacz więcej!</Link>
                         {/* <h4>{parseFloat(product.price).toLocaleString("pl-PL", {style:"currency", currency:"PLN"})}</h4>
                         <button onClick={() => addToCart(product)} className="Add-to-cart">Dodaj do koszyka</button> */}
 
