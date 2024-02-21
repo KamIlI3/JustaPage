@@ -13,7 +13,9 @@ function Shop(){
 
     return(
         <div className='Products'>
-
+ <div className='Front-img'>
+        <h1>Sklep</h1>
+        <img src='https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjQ3fDB8MXxzZWFyY2h8NjN8fHByb2R1Y3RzfGVufDB8fHx8MTcwODUxMzQ2M3ww&ixlib=rb-4.0.3&q=80&w=1440' alt="zdjecie"/></div> 
             <div className='Products-items'>
             {courses.map((cours) => (
                 <div key={cours.id} className='Item'>
@@ -22,7 +24,7 @@ function Shop(){
                     </div>
                     <div className='Item-content'>
                         <h3>{cours.name}</h3>
-                        <Link to={cours.reference} className='Find-out-more'>Dowiedz się więcej</Link>
+                        <Link to={cours.reference} className='Find-out-more'>Zobacz więcej!</Link>
                         {/* <h4>{parseFloat(product.price).toLocaleString("pl-PL", {style:"currency", currency:"PLN"})}</h4>
                         <button onClick={() => addToCart(product)} className="Add-to-cart">Dodaj do koszyka</button> */}
 

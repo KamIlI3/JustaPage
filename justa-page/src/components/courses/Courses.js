@@ -10,7 +10,8 @@ function Courses() {
     <div className='Courses'>
         <div className='Front-img'>
         <h1>Kursy</h1>
-        <img src='https://images.unsplash.com/photo-1512207855369-643452a63d46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjQ3fDB8MXxzZWFyY2h8ODF8fG1ha2V1cCUyMHByb2R1Y3RzfGVufDB8fHx8MTcwODQ1MzUyOHww&ixlib=rb-4.0.3&q=80&w=1456' alt="zdjecie"/></div>        <div className='Courses-content'>
+        <img src='https://images.unsplash.com/photo-1512207855369-643452a63d46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjQ3fDB8MXxzZWFyY2h8ODF8fG1ha2V1cCUyMHByb2R1Y3RzfGVufDB8fHx8MTcwODQ1MzUyOHww&ixlib=rb-4.0.3&q=80&w=1456' alt="zdjecie"/></div>        
+        <div className='Courses-content'>
             {courses.map((cours) => (
                 <div key={cours.id} className='Courses-item'>
                     <div className='Courses-item-img'>

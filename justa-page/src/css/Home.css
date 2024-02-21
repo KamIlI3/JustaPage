@@ -158,7 +158,7 @@
 }
 
 .Find-out-more {
-  background-color: rgb(0, 51, 102);
+  background-color: rgb(0, 136, 204);
   color: white;
   text-decoration: none;
   display: flex;
@@ -169,6 +169,7 @@
   border-radius: 40px;
   padding-top: 15px;
   transition: background-color 0.4s ease-in-out;
+  margin-bottom: 2%;
 }
 .Find-out-more:hover{
   background-color: rgb(0, 91, 150);
@@ -179,7 +180,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(0, 136, 204);
+  background-color: rgb(0, 51, 102);
 }
 .Products-home-item{
   width: 60%;
@@ -188,7 +189,7 @@
   align-self: center;
   justify-content: flex-start;
   margin: 2% 0 2% 0;
-  color: rgb(51, 51, 51);
+  color: white;
 }
 .Products-home-item-img {
   position: relative;
@@ -202,7 +203,7 @@
 .Little-circle-products{
   z-index: 1000;
   position: absolute;
-  background-color: rgb(0, 51, 102);
+  background-color: rgb(0, 136, 204);
   padding-top: 2%;
   width: 6%;
   border-radius: 50%;
@@ -212,7 +213,7 @@
 .Medium-circle-products{
   z-index: 1000;
   position: absolute;
-  background-color: rgb(0, 51, 102);
+  background-color: rgb(0, 136, 204);
   padding-top: 5%;
   width: 15%;
   border-radius: 50%;
@@ -222,7 +223,7 @@
 .Square-products{
   z-index: 0;
   position: absolute;
-  background-color: rgb(0, 51, 102);
+  background-color: rgb(0, 136, 204);
   padding-top: 35%;
   width: 35%;
   border-radius: 15%;
@@ -408,6 +409,6 @@
     display: none;
     position: absolute;
     top: 0%; 
-    left: 120%;
+    left: 100%;
   }
 }
