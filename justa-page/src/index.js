@@ -7,7 +7,6 @@ import ContactPage from './pages/ContactPage';
 import AboutMePage from './pages/AboutMePage'
 import ShopPage from './pages/ShopPage'
 import CartPage from './pages/CartPage'
-// import GalleryPage from './pages/GalleryPage'
 import RegulaminPage from './pages/RegulaminPage';
 import PolitykaODOPage from './pages/PolitykaODOPage';
 import PolitykaPrywatnosciPage from './pages/PolitykaPrywatnosciPage';
@@ -29,7 +28,6 @@ root.render(
         <Route path="/cart" element={<CartPage />} />
         <Route path='/courses' element={<CoursesPage />} />
         <Route path='/courses/kurs1' element={<Cours1Page />} />
-        {/* <Route path="/gallery" element={<GalleryPage />} /> */}
         <Route path='/regulamin' element={<RegulaminPage />}/>
         <Route path='/polityka-prywatnosci' element={<PolitykaPrywatnosciPage />}/>
         <Route path='/polityka-odo' element={<PolitykaODOPage />}/>

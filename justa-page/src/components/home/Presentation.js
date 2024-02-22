@@ -74,7 +74,6 @@ function Presentation() {
               <div
                 className={`dropdown-menu ${isDropdownOpen ? "active" : ""}`} onMouseLeave={handleMouseLeave}>
                 <Link to="/courses/kurs1">Kurs 1</Link>
-                <Link to="/courses/kurs2">Kurs 2</Link>
               </div>
             </>
           )}

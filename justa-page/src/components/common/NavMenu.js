@@ -30,11 +30,9 @@ function NavMenu() {
         {isDropdownOpen && (
         <div className={`dropdown-menu ${isDropdownOpen ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
           <Link to="/courses/kurs1">Kurs 1</Link>
-          <Link to="/courses/kurs2">Kurs 2</Link>
         </div>
       )}
       </div>
-        {/* <Link to="/gallery">Galeria</Link> */}
         <Link to="/contact">Kontakt</Link>
         <Link to="/shop">Sklep</Link>
         <Link to="/cart">
